@@ -1,0 +1,48 @@
+$color: steelblue;
+html, body{
+    font-family: 'Pirata One', cursive;
+}
+.box {
+    margin: 20px;
+  }
+  
+  .grid {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+.btn{
+    width: 150px;
+}
+.my-band {
+    color: $color;
+}
+
+.band-card {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.band-view{
+    text-align: center;
+}
+
+img{
+    
+    width: 400px;
+    height: 200px;
+}
+
+.label, .value{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.label{
+    font-style: italic;
+}
+
+

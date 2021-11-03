@@ -1,0 +1,48 @@
+
+.box {
+  margin: 20px;
+}
+
+.grid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.btn {
+  width: 150px;
+}
+
+.my-band {
+  color: steelblue;
+}
+
+.band-card {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.band-view {
+  text-align: center;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.label, .value {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.label {
+  font-style: italic;
+}
+
+button {
+  width: 90px;
+}
+/*# sourceMappingURL=index.011f33b6.css.map */

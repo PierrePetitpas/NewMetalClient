@@ -1,0 +1,91 @@
+.h5 {
+  color: black;
+}
+
+.my-band-card {
+  display: block;
+  background: rgba(1, 1, 1, 0.9);
+  width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.band-card {
+  float: left;
+}
+.band-poster {
+  margin-top: 15px;
+}
+
+.button {
+  width: 165px;
+}
+
+.myband-view .div-view {
+  padding: 15px;
+}
+.login {
+  width: 100%;
+  max-width: 660px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.label {
+  font-size: 20px;
+}
+
+.myLogin {
+  text-align: center;
+}
+
+html, body {
+  font-family: "Pirata One", cursive;
+}
+
+.box {
+  margin: 20px;
+}
+
+.grid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.btn {
+  width: 150px;
+}
+
+.my-band {
+  color: steelblue;
+}
+
+.band-card {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.band-view {
+  text-align: center;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.label, .value {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.label {
+  font-style: italic;
+}
+/*# sourceMappingURL=index.2b14e8c2.css.map */

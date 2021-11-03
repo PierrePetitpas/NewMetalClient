@@ -1,0 +1,32 @@
+.my-band {
+  color: steelblue;
+}
+
+.band-card {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.band-view {
+  text-align: center;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.label, .value {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.label {
+  font-style: italic;
+}
+
+button {
+  width: 90px;
+}
+/*# sourceMappingURL=index.caa67093.css.map */
