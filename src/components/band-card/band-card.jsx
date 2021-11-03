@@ -15,8 +15,8 @@ export class BandCard extends React.Component {
                 <Card className="bandCard text-center" bg= "dark">
                   <Card.Img className="cardImage" variant="top" src={band.ImagePath} />
                   <Card.Body>
-                    <Card.Title className="cardTitle">{band.Name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{band.Genre.Name}</Card.Subtitle>
+                    <Card.Title className="cardTitle" style={{fontSize: 35, color:'black'}}>{band.Name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted" style={{fontSize: 25}}>{band.Genre.Name}</Card.Subtitle>
                     <Button variant="secondary" onClick={() => onBandClick (band)} >More Details</Button>
                   </Card.Body>
                 </Card>

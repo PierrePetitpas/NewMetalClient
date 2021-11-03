@@ -16,34 +16,34 @@ export class BandView extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col></Col>
-                    <Col className="band-name band-details" xs={5}>
+                    <Col sm={2}></Col>
+                    <Col className="band-name band-details" xs={5} sm={4}>
                     <span className="label-span">Name: </span>
                     <span className="label-value">{band.Name}</span>
                     </Col>
-                    <Col className="band-origin band-details"xs={5}>
+                    <Col className="band-origin band-details"xs={5} sm={4}>
                     <span className="label-span">Origin: </span>
                     <span className="label-value">{band.Country}</span>
                     </Col>
                 </Row>
                 <Row>
-                    <Col></Col>
-                    <Col className="band-genre band-details" xs={5}>
+                    <Col sm={2}></Col>
+                    <Col className="band-genre band-details" xs={5} sm={4}>
                     <span className="label-span">Genre: </span>
                     <span className="label-value">{band.Genre.Name}</span>
                     </Col>
-                    <Col className="band-creation band-details"xs={5}>
+                    <Col className="band-creation band-details"xs={5} sm={4}>
                     <span className="label-span">Creation Date:  </span>
                     <span className="label-value">{band.Creation}</span>
                     </Col>
                 </Row>
                 <Row>
-                    <Col></Col>
-                    <Col className="band-label band-details" xs={5}>
+                    <Col sm={2}></Col>
+                    <Col className="band-label band-details" xs={5} sm={4}>
                     <span className="label-span">Label: </span>
                     <span className="label-value">{band.Label.Name}</span>
                     </Col>
-                    <Col className="label-creation band-details"xs={5}>
+                    <Col className="label-creation band-details"xs={5} sm={4}>
                     <span className="label-span">Label Origin:  </span>
                     <span className="label-value">{band.Label.Country}</span>
                     </Col>

@@ -25,33 +25,33 @@ export function RegistrationView(props) {
   return (
 
     <Form className="login">
-    <h1>My Metal bands site</h1>
-      <h2>Please Register!</h2>
-      <Form.Group className="mb-3" controlId="formBasicUsername">
+    <h1 className="register-text myh1">My Metal bands site</h1>
+      <h2 className="register-text">Please Register!</h2>
+      <Form.Group className="mb-3 register-text" controlId="formBasicUsername">
         <Form.Label className="label">Username</Form.Label>
         <Form.Control type="text" onChange={e => setUsername(e.target.value)} placeholder="username" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3 register-text" controlId="formBasicPassword">
         <Form.Label className="label">Password</Form.Label>
         <Form.Control  type="password" onChange={e => setPassword(e.target.value)} placeholder="password" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3 register-text" controlId="formBasicEmail">
         <Form.Label className="label">Email</Form.Label>
         <Form.Control  type="email" onChange={e => setEmail(e.target.value)} placeholder="email" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicFirstName">
+      <Form.Group className="mb-3 register-text" controlId="formBasicFirstName">
         <Form.Label className="label">First Name</Form.Label>
         <Form.Control type="text" onChange={e => setFirstName(e.target.value)} placeholder="firstname" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicLastName">
+      <Form.Group className="mb-3 register-text" controlId="formBasicLastName">
         <Form.Label className="label">Last Name</Form.Label>
         <Form.Control type="text" onChange={e => setLastName(e.target.value)} placeholder="lastname" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicBirthday">
+      <Form.Group className="mb-3 register-text" controlId="formBasicBirthday">
         <Form.Label className="label">Birthday</Form.Label>
         <Form.Control type="date" onChange={e => setBirthday(e.target.value)} placeholder="DOB" />
       </Form.Group>
-      <Button className="btn-lg btn-dark btn-block" type="submit" onClick={handleSubmit}>Register</Button>
+      <Button className="btn-lg btn-dark btn-block register-text" type="submit" onClick={handleSubmit}>Register</Button>
 </Form>               
   );
 }

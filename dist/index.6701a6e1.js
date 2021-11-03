@@ -37069,6 +37069,10 @@ class BandCard extends _reactDefault.default.Component {
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                             className: "cardTitle",
+                                            style: {
+                                                fontSize: 35,
+                                                color: 'black'
+                                            },
                                             __source: {
                                                 fileName: "src/components/band-card/band-card.jsx",
                                                 lineNumber: 18
@@ -37078,6 +37082,9 @@ class BandCard extends _reactDefault.default.Component {
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                                             className: "mb-2 text-muted",
+                                            style: {
+                                                fontSize: 25
+                                            },
                                             __source: {
                                                 fileName: "src/components/band-card/band-card.jsx",
                                                 lineNumber: 19
@@ -37315,6 +37322,7 @@ class BandView extends _reactDefault.default.Component {
                     __self: this,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 19
@@ -37324,6 +37332,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "band-name band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 20
@@ -37353,6 +37362,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "band-origin band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 24
@@ -37389,6 +37399,7 @@ class BandView extends _reactDefault.default.Component {
                     __self: this,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 30
@@ -37398,6 +37409,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "band-genre band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 31
@@ -37427,6 +37439,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "band-creation band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 35
@@ -37463,6 +37476,7 @@ class BandView extends _reactDefault.default.Component {
                     __self: this,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 41
@@ -37472,6 +37486,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "band-label band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 42
@@ -37501,6 +37516,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                             className: "label-creation band-details",
                             xs: 5,
+                            sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
                                 lineNumber: 46
@@ -37665,6 +37681,7 @@ function LoginView(props) {
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+                className: "group-text myh1",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 22
@@ -37673,6 +37690,7 @@ function LoginView(props) {
                 children: "My Metal bands site"
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                className: "group-text",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 23
@@ -37681,7 +37699,7 @@ function LoginView(props) {
                 children: "Enter the magic of music"
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 group-text",
                 controlId: "formBasicUsername",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
@@ -37712,7 +37730,7 @@ function LoginView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 group-text",
                 controlId: "formBasicPassword",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
@@ -37743,7 +37761,7 @@ function LoginView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                className: "btn-lg btn-dark btn-block",
+                className: "btn-lg btn-dark btn-block group-text",
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
@@ -37814,6 +37832,7 @@ function RegistrationView(props) {
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+                className: "register-text myh1",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
                     lineNumber: 28
@@ -37822,6 +37841,7 @@ function RegistrationView(props) {
                 children: "My Metal bands site"
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                className: "register-text",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
                     lineNumber: 29
@@ -37830,7 +37850,7 @@ function RegistrationView(props) {
                 children: "Please Register!"
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicUsername",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -37861,7 +37881,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicPassword",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -37892,7 +37912,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicEmail",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -37923,7 +37943,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicFirstName",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -37954,7 +37974,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicLastName",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -37985,7 +38005,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                className: "mb-3",
+                className: "mb-3 register-text",
                 controlId: "formBasicBirthday",
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
@@ -38016,7 +38036,7 @@ function RegistrationView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                className: "btn-lg btn-dark btn-block",
+                className: "btn-lg btn-dark btn-block register-text",
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
