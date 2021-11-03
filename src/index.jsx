@@ -18,5 +18,3 @@ const container = document.getElementsByClassName('app-container')[0];
 
 // Tells React to render my app in the root DOM element
 ReactDOM.render(React.createElement(MyBandApplication), container);
-
-
