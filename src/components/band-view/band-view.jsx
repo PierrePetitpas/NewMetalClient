@@ -8,59 +8,59 @@ export class BandView extends React.Component {
         const { band, onBackClick } = this.props;
 
         return (
-            <Container className="myband-view">
+            <div className="myband-view">
 
                 <Row>
-                    <div className="band-view">
-                        <div className="div-view band-poster">
-                            <img src={band.ImagePath} />
-                        </div>
-                        <div className="div-view band-name">
-                            <span className="label">Name: </span>
-                            <span className="value">{band.Name}</span>
-                        </div>
-                        <div className="div-view band-description">
-                            <span className="label">Description: </span>
-                            <span className="value">{band.Description}</span>
-                        </div>
-                        <div className="div-view band-origin">
-                            <span className="label">Origin: </span>
-                            <span className="value">{band.Country}</span>
-                        </div>
-                        <div className="div-view band-creation">
-                            <span className="label">Creation Date: </span>
-                            <span className="value">{band.Creation}</span>
-                        </div>
-                        <div className="div-view band-genre">
-                            <span className="label">Genre: </span>
-                            <span className="value">{band.Genre.Name}</span>
-                        </div>
-                        <div className="div-view genre-description">
-                            <span className="label">Genre Description: </span>
-                            <span className="value">{band.Genre.Description}</span>
-                        </div>
-                        <div className="div-view band-label">
-                            <span className="label">Label: </span>
-                            <span className="value">{band.Label.Name}</span>
-                        </div>
-                        <div className="div-view label-bio">
-                            <span className="label">Label Bio: </span>
-                            <span className="value">{band.Label.Bio}</span>
-                        </div>
-                        <div className="div-view label-creation">
-                            <span className="label">Label Creation date: </span>
-                            <span className="value">{band.Label.Creation}</span>
-                        </div>
-                        <div className="div-view label-creation">
-                            <span className="label">Label Origin: </span>
-                            <span className="value">{band.Label.Country}</span>
-                        </div>
-                        <div className="div-view">
-                        <   button className="btn-lg btn-dark" onClick={() => { onBackClick(null); }}>Back to bands</button>
-                        </div>
-                    </div>
+                    <Col className="band-poster" xs={12}>
+                        <img src={band.ImagePath} />
+                    </Col>
                 </Row>
-            </Container>
+                <Row>
+                    <Col></Col>
+                    <Col className="band-name band-details" xs={5}>
+                    <span className="label-span">Name: </span>
+                    <span className="label-value">{band.Name}</span>
+                    </Col>
+                    <Col className="band-origin band-details"xs={5}>
+                    <span className="label-span">Origin: </span>
+                    <span className="label-value">{band.Country}</span>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col className="band-genre band-details" xs={5}>
+                    <span className="label-span">Genre: </span>
+                    <span className="label-value">{band.Genre.Name}</span>
+                    </Col>
+                    <Col className="band-creation band-details"xs={5}>
+                    <span className="label-span">Creation Date:  </span>
+                    <span className="label-value">{band.Creation}</span>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col className="band-label band-details" xs={5}>
+                    <span className="label-span">Label: </span>
+                    <span className="label-value">{band.Label.Name}</span>
+                    </Col>
+                    <Col className="label-creation band-details"xs={5}>
+                    <span className="label-span">Label Origin:  </span>
+                    <span className="label-value">{band.Label.Country}</span>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="band-description band-details"  xs={12}>
+                    <span className="label-value">{band.Description}</span>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col className="back-button">
+                        <button className="btn-lg btn-dark" onClick={() => { onBackClick(null); }}>Back to bands</button>
+                    </Col>
+                    <Col></Col>
+                </Row>
+            </div>
         );
     }
     

@@ -62,7 +62,8 @@ export class MainView extends React.Component {
        if (bands.length === 0) return <div className="main-view">The list is empty!</div>
 
        return (
-           <div className="main-view">
+           <Container className="main-view">
+          
             <Navbar bg="dark" variant="dark" expand="lg" >
                 <Container fluid>
                     <Navbar.Brand href="#home">My Metal Site</Navbar.Brand>
@@ -74,15 +75,17 @@ export class MainView extends React.Component {
                 </Nav>
             </Container>
         </Navbar>
-
+            <Row>
                {selectedBand
-               ? <BandView band={selectedBand} onBackClick= {newSelectedBand => {this.setSelectedBand(newSelectedBand);}}/>
+               ? (<BandView band={selectedBand} onBackClick= {newSelectedBand => {this.setSelectedBand(newSelectedBand);}}/>
+               )
                 : bands.map(band => (
                     <BandCard key={band._id} band={band} onBandClick={(band) => {this.setSelectedBand(band)}}/>
                 ))
 
                 }
-           </div>
+                </Row>
+           </Container>
        );
     }
 }
