@@ -37720,7 +37720,7 @@ function LoginView(props) {
                         type: "text",
                         onChange: (e)=>setUsername(e.target.value)
                         ,
-                        placeholder: "User Name",
+                        placeholder: "UserName",
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
                             lineNumber: 26

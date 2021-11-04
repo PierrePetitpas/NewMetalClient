@@ -23,7 +23,7 @@ export function LoginView(props) {
       <h2 className="group-text">Enter the magic of music</h2>
       <Form.Group className="mb-3 group-text" controlId="formBasicUsername">
         <Form.Label className="label">Username</Form.Label>
-        <Form.Control type="text" onChange={e => setUsername(e.target.value)} placeholder="User Name" />
+        <Form.Control type="text" onChange={e => setUsername(e.target.value)} placeholder="UserName" />
       </Form.Group>
       <Form.Group className="mb-3 group-text" controlId="formBasicPassword">
         <Form.Label className="label">Password</Form.Label>
