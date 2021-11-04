@@ -44,6 +44,10 @@
 .back-button {
   font-family: "Pirata One", cursive;
 }
+
+hr {
+  background-color: white;
+}
 .login {
   width: 100%;
   max-width: 660px;

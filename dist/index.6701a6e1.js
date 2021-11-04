@@ -37314,10 +37314,17 @@ class BandView extends _reactDefault.default.Component {
                         })
                     })
                 }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
                         lineNumber: 18
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 19
                     },
                     __self: this,
                     children: [
@@ -37325,7 +37332,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 19
+                                lineNumber: 20
                             },
                             __self: this
                         }),
@@ -37335,7 +37342,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 20
+                                lineNumber: 21
                             },
                             __self: this,
                             children: [
@@ -37343,7 +37350,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 21
+                                        lineNumber: 22
                                     },
                                     __self: this,
                                     children: "Name: "
@@ -37352,7 +37359,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 22
+                                        lineNumber: 23
                                     },
                                     __self: this,
                                     children: band.Name
@@ -37365,7 +37372,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 24
+                                lineNumber: 25
                             },
                             __self: this,
                             children: [
@@ -37373,7 +37380,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 25
+                                        lineNumber: 26
                                     },
                                     __self: this,
                                     children: "Origin: "
@@ -37382,7 +37389,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 26
+                                        lineNumber: 27
                                     },
                                     __self: this,
                                     children: band.Country
@@ -37394,7 +37401,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 29
+                        lineNumber: 30
                     },
                     __self: this,
                     children: [
@@ -37402,7 +37409,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 30
+                                lineNumber: 31
                             },
                             __self: this
                         }),
@@ -37412,7 +37419,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 31
+                                lineNumber: 32
                             },
                             __self: this,
                             children: [
@@ -37420,7 +37427,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 32
+                                        lineNumber: 33
                                     },
                                     __self: this,
                                     children: "Genre: "
@@ -37429,7 +37436,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 33
+                                        lineNumber: 34
                                     },
                                     __self: this,
                                     children: band.Genre.Name
@@ -37442,7 +37449,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 35
+                                lineNumber: 36
                             },
                             __self: this,
                             children: [
@@ -37450,7 +37457,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 36
+                                        lineNumber: 37
                                     },
                                     __self: this,
                                     children: "Creation Date: "
@@ -37459,7 +37466,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 37
+                                        lineNumber: 38
                                     },
                                     __self: this,
                                     children: band.Creation
@@ -37471,7 +37478,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 40
+                        lineNumber: 42
                     },
                     __self: this,
                     children: [
@@ -37479,7 +37486,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 41
+                                lineNumber: 43
                             },
                             __self: this
                         }),
@@ -37489,7 +37496,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 42
+                                lineNumber: 44
                             },
                             __self: this,
                             children: [
@@ -37497,7 +37504,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 43
+                                        lineNumber: 45
                                     },
                                     __self: this,
                                     children: "Label: "
@@ -37506,7 +37513,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 44
+                                        lineNumber: 46
                                     },
                                     __self: this,
                                     children: band.Label.Name
@@ -37519,7 +37526,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 46
+                                lineNumber: 48
                             },
                             __self: this,
                             children: [
@@ -37527,7 +37534,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 47
+                                        lineNumber: 49
                                     },
                                     __self: this,
                                     children: "Label Origin: "
@@ -37536,7 +37543,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 48
+                                        lineNumber: 50
                                     },
                                     __self: this,
                                     children: band.Label.Country
@@ -37545,10 +37552,17 @@ class BandView extends _reactDefault.default.Component {
                         })
                     ]
                 }),
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 53
+                    },
+                    __self: this
+                }),
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 51
+                        lineNumber: 54
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
@@ -37556,31 +37570,38 @@ class BandView extends _reactDefault.default.Component {
                         xs: 12,
                         __source: {
                             fileName: "src/components/band-view/band-view.jsx",
-                            lineNumber: 52
+                            lineNumber: 55
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx("span", {
                             className: "label-value",
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 53
+                                lineNumber: 56
                             },
                             __self: this,
                             children: band.Description
                         })
                     })
                 }),
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 59
+                    },
+                    __self: this
+                }),
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 56
+                        lineNumber: 60
                     },
                     __self: this,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 57
+                                lineNumber: 61
                             },
                             __self: this
                         }),
@@ -37588,7 +37609,7 @@ class BandView extends _reactDefault.default.Component {
                             className: "back-button",
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 58
+                                lineNumber: 62
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
@@ -37598,7 +37619,7 @@ class BandView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/band-view/band-view.jsx",
-                                    lineNumber: 59
+                                    lineNumber: 63
                                 },
                                 __self: this,
                                 children: "Back to bands"
@@ -37607,7 +37628,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 61
+                                lineNumber: 65
                             },
                             __self: this
                         })

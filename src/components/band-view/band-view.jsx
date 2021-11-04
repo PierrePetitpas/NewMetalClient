@@ -15,6 +15,7 @@ export class BandView extends React.Component {
                         <img src={band.ImagePath} />
                     </Col>
                 </Row>
+                <hr></hr>
                 <Row>
                     <Col sm={2}></Col>
                     <Col className="band-name band-details" xs={5} sm={4}>
@@ -36,6 +37,7 @@ export class BandView extends React.Component {
                     <span className="label-span">Creation Date:  </span>
                     <span className="label-value">{band.Creation}</span>
                     </Col>
+                
                 </Row>
                 <Row>
                     <Col sm={2}></Col>
@@ -48,11 +50,13 @@ export class BandView extends React.Component {
                     <span className="label-value">{band.Label.Country}</span>
                     </Col>
                 </Row>
+                <hr></hr>
                 <Row>
                     <Col className="band-description band-details"  xs={12}>
                     <span className="label-value">{band.Description}</span>
                     </Col>
                 </Row>
+                <hr></hr>
                 <Row>
                     <Col></Col>
                     <Col className="back-button">
