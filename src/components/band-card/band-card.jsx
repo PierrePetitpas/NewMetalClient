@@ -13,13 +13,13 @@ export class BandCard extends React.Component {
           
           <Container className="band-card w-25">
           <Row>
-            <Col className="my-band-card" xs={12}  md={1} lg={12}>
+            <Col className="my-band-card" >
               <CardGroup className=" d-block">
                 <Card style={{ width: '18rem' }}  className="bandCard text-center" bg= "dark">
                   <Card.Img className="cardImage" variant="top" src={band.ImagePath} />
                   <Card.Body>
-                    <Card.Title className="cardTitle">{band.Name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{band.Genre.Name}</Card.Subtitle>
+                    <Card.Title className="cardTitle" style={{"font-size": "35px", color: "black"}}>{band.Name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted" style={{"font-size": "25px"}}>{band.Genre.Name}</Card.Subtitle>
                     <div>
                     <Link to={`/bands/${band._id}`}>        
                     <Button variant="secondary">More Details</Button>

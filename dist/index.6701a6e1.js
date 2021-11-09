@@ -22919,6 +22919,9 @@ class MainView extends _reactDefault.default.Component {
                                 className: "main-view"
                             }));
                             return bands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                    xs: 1,
+                                    md: 1,
+                                    lg: 12,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_bandCard.BandCard, {
                                         band: m
                                     })
@@ -37151,9 +37154,6 @@ class BandCard extends _reactDefault.default.Component {
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     className: "my-band-card",
-                    xs: 12,
-                    md: 1,
-                    lg: 12,
                     __source: {
                         fileName: "src/components/band-card/band-card.jsx",
                         lineNumber: 16
@@ -37197,6 +37197,10 @@ class BandCard extends _reactDefault.default.Component {
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                             className: "cardTitle",
+                                            style: {
+                                                "font-size": "35px",
+                                                color: "black"
+                                            },
                                             __source: {
                                                 fileName: "src/components/band-card/band-card.jsx",
                                                 lineNumber: 21
@@ -37206,6 +37210,9 @@ class BandCard extends _reactDefault.default.Component {
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                                             className: "mb-2 text-muted",
+                                            style: {
+                                                "font-size": "25px"
+                                            },
                                             __source: {
                                                 fileName: "src/components/band-card/band-card.jsx",
                                                 lineNumber: 22

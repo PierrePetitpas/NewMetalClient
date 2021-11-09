@@ -110,7 +110,7 @@ export class MainView extends React.Component {
                      
 
                       return bands.map(m => (
-                       <Col key={m._id}>
+                       <Col xs={1}  md={1} lg={12} key={m._id}>
                         <BandCard band={m}/>  
                         </Col>
                         ))
