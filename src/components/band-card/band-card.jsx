@@ -3,30 +3,37 @@ import PropTypes from 'prop-types';
 import { Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 import './band-card.scss';
 
+import { Link } from "react-router-dom";
+
 export class BandCard extends React.Component {
     render () {
-      const { band , onBandClick } = this.props;
+      const { band } = this.props;
 
         return (
-          <Container className="band-card w-50">
-          <Row>
-            <Col className="my-band-card" sm='9'>
-              <CardGroup className="m-5  d-block">
-                <Card className="bandCard text-center" bg= "dark">
-                  <Card.Img className="cardImage" variant="top" src={band.ImagePath} />
-                  <Card.Body>
-                    <Card.Title className="cardTitle" style={{fontSize: 35, color:'black'}}>{band.Name}</Card.Title>
+          
+           <Row>
+            <Col  xs={12}  md={4} lg={3} className="my-band-card" >
+            
+            <Card  style={{ width: '18rem' }}  bg= "dark">
+              <Card.Img className="card-image" variant="top" src={band.ImagePath} />
+              <Card.Body>
+              <Card.Title className="cardTitle" style={{fontSize: 35, color:'black'}}>{band.Name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted" style={{fontSize: 25}}>{band.Genre.Name}</Card.Subtitle>
-                    <Button variant="secondary" onClick={() => onBandClick (band)} >More Details</Button>
-                  </Card.Body>
-                </Card>
-              </CardGroup>
+                    <div>
+                    <Link to={`/bands/${band._id}`}>        
+                    <Button variant="secondary">More Details</Button>
+                    </Link>
+                    </div>
+              </Card.Body>
+            </Card>
+                          
             </Col>
-          </Row>
-        </Container>
+            </Row>  
+      
       );
     }
 }
+
 BandCard.propTypes = {
     band: PropTypes.shape({
       Name: PropTypes.string.isRequired,
@@ -47,5 +54,6 @@ BandCard.propTypes = {
       ImagePath: PropTypes.string.isRequired,
       Active: PropTypes.bool
     }).isRequired,
-    onBandClick: PropTypes.func.isRequired
+   
   };
+

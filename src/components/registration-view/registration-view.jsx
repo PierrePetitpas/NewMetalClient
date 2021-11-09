@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
+import axios from 'axios';
 import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 
 
@@ -16,15 +17,27 @@ export function RegistrationView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password, email, firstname, lastname, DOB);
-    /* Send a request to the server for authentication */
-    /* then call props on registored user(username) */
-    props.onRegistration(username);
+    axios.post('https://mybands.herokuapp.com/users', {
+      Username: username,
+      Password: password,
+      Firstname: firstname,
+      Lastname: lastname,
+      Email: email,
+      DOB: DOB
+    })
+    .then(response => {
+      const data = response.data;
+      console.log(data);
+      window.open('#', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+    })
+    .catch(e => {
+      console.log('error registering the user')
+    });
   };
 
   return (
 
-    <Form className="login">
+    <Form className="register">
     <h1 className="register-text myh1">My Metal bands site</h1>
       <h2 className="register-text">Please Register!</h2>
       <Form.Group className="mb-3 register-text" controlId="formBasicUsername">
@@ -56,6 +69,14 @@ export function RegistrationView(props) {
   );
 }
 
-RegistrationView.propTypes = {
-  onRegistration: PropTypes.func.isRequired,
-};
+
+/*RegistrationView.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
+    DOB: PropTypes.number 
+  }).isRequired
+};*/
