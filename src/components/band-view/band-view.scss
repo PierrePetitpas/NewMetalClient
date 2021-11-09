@@ -6,6 +6,21 @@
     width: 165px;
 }
 
-.myband-view .div-view {
+.band-poster, .back-button{
+    text-align: center;
+}
+
+.band-details{
+    font-size: 35px;
+    font-weight: bold;
     padding: 15px;
+    font-family: 'Pirata One', cursive;
+}
+
+.back-button{
+    font-family: 'Pirata One', cursive;
+}
+
+hr{
+    background-color: white;
 }
