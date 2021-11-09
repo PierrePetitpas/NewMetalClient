@@ -37136,102 +37136,112 @@ var _reactRouterDom = require("react-router-dom");
 class BandCard extends _reactDefault.default.Component {
     render() {
         const { band  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
+            className: "band-card w-25",
             __source: {
                 fileName: "src/components/band-card/band-card.jsx",
                 lineNumber: 14
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                xs: 12,
-                md: 4,
-                lg: 3,
-                className: "my-band-card",
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/band-card/band-card.jsx",
                     lineNumber: 15
                 },
                 __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
-                    style: {
-                        width: '18rem'
-                    },
-                    bg: "dark",
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                    className: "my-band-card",
+                    xs: 12,
+                    md: 1,
+                    lg: 12,
                     __source: {
                         fileName: "src/components/band-card/band-card.jsx",
-                        lineNumber: 17
+                        lineNumber: 16
                     },
                     __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
-                            className: "card-image",
-                            variant: "top",
-                            src: band.ImagePath,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
+                        className: " d-block",
+                        __source: {
+                            fileName: "src/components/band-card/band-card.jsx",
+                            lineNumber: 17
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+                            style: {
+                                width: '18rem'
+                            },
+                            className: "bandCard text-center",
+                            bg: "dark",
                             __source: {
                                 fileName: "src/components/band-card/band-card.jsx",
                                 lineNumber: 18
                             },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
-                            __source: {
-                                fileName: "src/components/band-card/band-card.jsx",
-                                lineNumber: 19
-                            },
                             __self: this,
                             children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
-                                    className: "cardTitle",
-                                    style: {
-                                        fontSize: 35,
-                                        color: 'black'
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
+                                    className: "cardImage",
+                                    variant: "top",
+                                    src: band.ImagePath,
+                                    __source: {
+                                        fileName: "src/components/band-card/band-card.jsx",
+                                        lineNumber: 19
                                     },
+                                    __self: this
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                                     __source: {
                                         fileName: "src/components/band-card/band-card.jsx",
                                         lineNumber: 20
                                     },
                                     __self: this,
-                                    children: band.Name
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
-                                    className: "mb-2 text-muted",
-                                    style: {
-                                        fontSize: 25
-                                    },
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 21
-                                    },
-                                    __self: this,
-                                    children: band.Genre.Name
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 22
-                                    },
-                                    __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                        to: `/bands/${band._id}`,
-                                        __source: {
-                                            fileName: "src/components/band-card/band-card.jsx",
-                                            lineNumber: 23
-                                        },
-                                        __self: this,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                            variant: "secondary",
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
+                                            className: "cardTitle",
                                             __source: {
                                                 fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 24
+                                                lineNumber: 21
                                             },
                                             __self: this,
-                                            children: "More Details"
+                                            children: band.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
+                                            className: "mb-2 text-muted",
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 22
+                                            },
+                                            __self: this,
+                                            children: band.Genre.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 23
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                                to: `/bands/${band._id}`,
+                                                __source: {
+                                                    fileName: "src/components/band-card/band-card.jsx",
+                                                    lineNumber: 24
+                                                },
+                                                __self: this,
+                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                    variant: "secondary",
+                                                    __source: {
+                                                        fileName: "src/components/band-card/band-card.jsx",
+                                                        lineNumber: 25
+                                                    },
+                                                    __self: this,
+                                                    children: "More Details"
+                                                })
+                                            })
                                         })
-                                    })
+                                    ]
                                 })
                             ]
                         })
-                    ]
+                    })
                 })
             })
         }));

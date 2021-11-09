@@ -11,24 +11,27 @@ export class BandCard extends React.Component {
 
         return (
           
-           <Row>
-            <Col  xs={12}  md={4} lg={3} className="my-band-card" >
-            
-            <Card  style={{ width: '18rem' }}  bg= "dark">
-              <Card.Img className="card-image" variant="top" src={band.ImagePath} />
-              <Card.Body>
-              <Card.Title className="cardTitle" style={{fontSize: 35, color:'black'}}>{band.Name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted" style={{fontSize: 25}}>{band.Genre.Name}</Card.Subtitle>
+          <Container className="band-card w-25">
+          <Row>
+            <Col className="my-band-card" xs={12}  md={1} lg={12}>
+              <CardGroup className=" d-block">
+                <Card style={{ width: '18rem' }}  className="bandCard text-center" bg= "dark">
+                  <Card.Img className="cardImage" variant="top" src={band.ImagePath} />
+                  <Card.Body>
+                    <Card.Title className="cardTitle">{band.Name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{band.Genre.Name}</Card.Subtitle>
                     <div>
                     <Link to={`/bands/${band._id}`}>        
                     <Button variant="secondary">More Details</Button>
                     </Link>
                     </div>
-              </Card.Body>
-            </Card>
-                          
+                  </Card.Body>
+                </Card>
+              </CardGroup>
             </Col>
-            </Row>  
+          </Row>
+        </Container>
+
       
       );
     }
