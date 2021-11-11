@@ -23060,7 +23060,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-bootstrap":"h2YVd","../band-card/band-card":"f04ca","../band-view/band-view":"6dWkn","../login-view/login-view":"054li","../registration-view/registration-view":"aP2YV","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","react-router-dom":"cpyQW","../genre-view/genre-view":"8WCoL","../label-view/label-view":"e6ifc","../profile-view/profile-view":"2E7Aw"}],"iYoWk":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-bootstrap":"h2YVd","../band-view/band-view":"6dWkn","../login-view/login-view":"054li","../registration-view/registration-view":"aP2YV","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","../band-card/band-card":"f04ca","react-router-dom":"cpyQW","../genre-view/genre-view":"8WCoL","../label-view/label-view":"e6ifc","../profile-view/profile-view":"2E7Aw"}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
@@ -37117,144 +37117,441 @@ Tooltip.defaultProps = defaultProps;
 Tooltip.displayName = 'Tooltip';
 exports.default = Tooltip;
 
-},{"classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./helpers":"S1Bw1","react/jsx-runtime":"8xIwr","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ"}],"f04ca":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4a51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./helpers":"S1Bw1","react/jsx-runtime":"8xIwr","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ"}],"6dWkn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a1de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4a51.prelude(module);
+$parcel$ReactRefreshHelpers$a1de.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "BandCard", ()=>BandCard
+parcelHelpers.export(exports, "BandView", ()=>BandView
 );
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
-var _bandCardScss = require("./band-card.scss");
+var _bandViewScss = require("./band-view.scss");
 var _reactRouterDom = require("react-router-dom");
-class BandCard extends _reactDefault.default.Component {
+class BandView extends _reactDefault.default.Component {
     render() {
-        const { band  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
-            className: "band-card w-25",
+        const { band , onBackClick  } = this.props;
+        const buttonstyle = {
+            color: 'white',
+            'padding-top': '5px',
+            'font-size': '35px',
+            width: "fit-content"
+        };
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+            className: "myband-view",
             __source: {
-                fileName: "src/components/band-card/band-card.jsx",
-                lineNumber: 14
+                fileName: "src/components/band-view/band-view.jsx",
+                lineNumber: 22
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
-                __source: {
-                    fileName: "src/components/band-card/band-card.jsx",
-                    lineNumber: 15
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                    className: "my-band-card",
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                     __source: {
-                        fileName: "src/components/band-card/band-card.jsx",
-                        lineNumber: 16
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 24
                     },
                     __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
-                        className: " d-block",
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                        className: "band-poster",
+                        xs: 12,
                         __source: {
-                            fileName: "src/components/band-card/band-card.jsx",
-                            lineNumber: 17
+                            fileName: "src/components/band-view/band-view.jsx",
+                            lineNumber: 25
                         },
                         __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
-                            style: {
-                                width: '18rem'
-                            },
-                            className: "bandCard text-center",
-                            bg: "dark",
+                        children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                            src: band.ImagePath,
                             __source: {
-                                fileName: "src/components/band-card/band-card.jsx",
-                                lineNumber: 18
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 26
+                            },
+                            __self: this
+                        })
+                    })
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 29
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 30
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 31
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "band-name band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 32
                             },
                             __self: this,
                             children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
-                                    className: "cardImage",
-                                    variant: "top",
-                                    src: band.ImagePath,
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
                                     __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 19
-                                    },
-                                    __self: this
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 20
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 33
                                     },
                                     __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
-                                            className: "cardTitle",
-                                            style: {
-                                                "font-size": "35px",
-                                                color: "black"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 21
-                                            },
-                                            __self: this,
-                                            children: band.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
-                                            className: "mb-2 text-muted",
-                                            style: {
-                                                "font-size": "25px"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 22
-                                            },
-                                            __self: this,
-                                            children: band.Genre.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 23
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                                to: `/bands/${band._id}`,
-                                                __source: {
-                                                    fileName: "src/components/band-card/band-card.jsx",
-                                                    lineNumber: 24
-                                                },
-                                                __self: this,
-                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                    variant: "secondary",
-                                                    __source: {
-                                                        fileName: "src/components/band-card/band-card.jsx",
-                                                        lineNumber: 25
-                                                    },
-                                                    __self: this,
-                                                    children: "More Details"
-                                                })
-                                            })
-                                        })
-                                    ]
+                                    children: "Name: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-value",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 34
+                                    },
+                                    __self: this,
+                                    children: band.Name
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "band-origin band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 36
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 37
+                                    },
+                                    __self: this,
+                                    children: "Origin: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-value",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 38
+                                    },
+                                    __self: this,
+                                    children: band.Country
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 40
+                            },
+                            __self: this
                         })
-                    })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 42
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 43
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "band-genre band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 44
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 45
+                                    },
+                                    __self: this,
+                                    children: "Genre: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                    to: `/genres/${band.Genre.Name}`,
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 46
+                                    },
+                                    __self: this,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                        style: buttonstyle,
+                                        className: "label-button",
+                                        variant: "link",
+                                        __source: {
+                                            fileName: "src/components/band-view/band-view.jsx",
+                                            lineNumber: 47
+                                        },
+                                        __self: this,
+                                        children: band.Genre.Name
+                                    })
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "band-creation band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 50
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 51
+                                    },
+                                    __self: this,
+                                    children: "Creation Date: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-value",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 52
+                                    },
+                                    __self: this,
+                                    children: band.Creation
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 54
+                            },
+                            __self: this
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 56
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 57
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "band-label band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 58
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 59
+                                    },
+                                    __self: this,
+                                    children: "Label: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                    to: `/labels/${band.Label.Name}`,
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 60
+                                    },
+                                    __self: this,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                        style: buttonstyle,
+                                        variant: "link",
+                                        className: "label-button",
+                                        __source: {
+                                            fileName: "src/components/band-view/band-view.jsx",
+                                            lineNumber: 61
+                                        },
+                                        __self: this,
+                                        children: band.Label.Name
+                                    })
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            className: "label-creation band-details",
+                            sm: 4,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 64
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-span",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 65
+                                    },
+                                    __self: this,
+                                    children: "Label Origin: "
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                    className: "label-value",
+                                    __source: {
+                                        fileName: "src/components/band-view/band-view.jsx",
+                                        lineNumber: 66
+                                    },
+                                    __self: this,
+                                    children: band.Label.Country
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            sm: 2,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 68
+                            },
+                            __self: this
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 70
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 71
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            xs: 1,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 72
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            className: "band-description band-details",
+                            xs: 10,
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 73
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                className: "label-value",
+                                __source: {
+                                    fileName: "src/components/band-view/band-view.jsx",
+                                    lineNumber: 74
+                                },
+                                __self: this,
+                                children: band.Description
+                            })
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 77
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                    __source: {
+                        fileName: "src/components/band-view/band-view.jsx",
+                        lineNumber: 78
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 79
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            className: "back-button",
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 80
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                className: "btn-lg btn-dark",
+                                onClick: ()=>{
+                                    onBackClick(null);
+                                },
+                                __source: {
+                                    fileName: "src/components/band-view/band-view.jsx",
+                                    lineNumber: 81
+                                },
+                                __self: this,
+                                children: "Back to bands"
+                            })
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            __source: {
+                                fileName: "src/components/band-view/band-view.jsx",
+                                lineNumber: 83
+                            },
+                            __self: this
+                        })
+                    ]
                 })
-            })
+            ]
         }));
     }
 }
-BandCard.propTypes = {
+BandView.propTypes = {
     band: _propTypesDefault.default.shape({
         Name: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
@@ -37275,13 +37572,14 @@ BandCard.propTypes = {
         Active: _propTypesDefault.default.bool
     }).isRequired
 };
+exports.default = BandView;
 
-  $parcel$ReactRefreshHelpers$4a51.postlude(module);
+  $parcel$ReactRefreshHelpers$a1de.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./band-card.scss":"1C32R","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","react-router-dom":"cpyQW"}],"1C32R":[function() {},{}],"l6RLv":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./band-view.scss":"9aEAp","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","axios":"iYoWk","react-router-dom":"cpyQW"}],"9aEAp":[function() {},{}],"l6RLv":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -39696,469 +39994,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"5wFcP"}],"6dWkn":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a1de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a1de.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "BandView", ()=>BandView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
-var _bandViewScss = require("./band-view.scss");
-var _reactRouterDom = require("react-router-dom");
-class BandView extends _reactDefault.default.Component {
-    render() {
-        const { band , onBackClick  } = this.props;
-        const buttonstyle = {
-            color: 'white',
-            'padding-top': '5px',
-            'font-size': '35px',
-            width: "fit-content"
-        };
-        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            className: "myband-view",
-            __source: {
-                fileName: "src/components/band-view/band-view.jsx",
-                lineNumber: 22
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 24
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                        className: "band-poster",
-                        xs: 12,
-                        __source: {
-                            fileName: "src/components/band-view/band-view.jsx",
-                            lineNumber: 25
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                            src: band.ImagePath,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 26
-                            },
-                            __self: this
-                        })
-                    })
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 29
-                    },
-                    __self: this
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 30
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 31
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "band-name band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 32
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 33
-                                    },
-                                    __self: this,
-                                    children: "Name: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-value",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 34
-                                    },
-                                    __self: this,
-                                    children: band.Name
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "band-origin band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 36
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 37
-                                    },
-                                    __self: this,
-                                    children: "Origin: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-value",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 38
-                                    },
-                                    __self: this,
-                                    children: band.Country
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 40
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 42
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 43
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "band-genre band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 44
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 45
-                                    },
-                                    __self: this,
-                                    children: "Genre: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                    to: `/genres/${band.Genre.Name}`,
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 46
-                                    },
-                                    __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                        style: buttonstyle,
-                                        className: "label-button",
-                                        variant: "link",
-                                        __source: {
-                                            fileName: "src/components/band-view/band-view.jsx",
-                                            lineNumber: 47
-                                        },
-                                        __self: this,
-                                        children: band.Genre.Name
-                                    })
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "band-creation band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 50
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 51
-                                    },
-                                    __self: this,
-                                    children: "Creation Date: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-value",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 52
-                                    },
-                                    __self: this,
-                                    children: band.Creation
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 54
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 56
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 57
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "band-label band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 58
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 59
-                                    },
-                                    __self: this,
-                                    children: "Label: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                    to: `/labels/${band.Label.Name}`,
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 60
-                                    },
-                                    __self: this,
-                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                        style: buttonstyle,
-                                        variant: "link",
-                                        className: "label-button",
-                                        __source: {
-                                            fileName: "src/components/band-view/band-view.jsx",
-                                            lineNumber: 61
-                                        },
-                                        __self: this,
-                                        children: band.Label.Name
-                                    })
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                            className: "label-creation band-details",
-                            sm: 4,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 64
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-span",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 65
-                                    },
-                                    __self: this,
-                                    children: "Label Origin: "
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                    className: "label-value",
-                                    __source: {
-                                        fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 66
-                                    },
-                                    __self: this,
-                                    children: band.Label.Country
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            sm: 2,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 68
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 70
-                    },
-                    __self: this
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 71
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            xs: 1,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 72
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            className: "band-description band-details",
-                            xs: 10,
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 73
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                className: "label-value",
-                                __source: {
-                                    fileName: "src/components/band-view/band-view.jsx",
-                                    lineNumber: 74
-                                },
-                                __self: this,
-                                children: band.Description
-                            })
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("hr", {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 77
-                    },
-                    __self: this
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-                    __source: {
-                        fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 78
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 79
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            className: "back-button",
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 80
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                className: "btn-lg btn-dark",
-                                onClick: ()=>{
-                                    onBackClick(null);
-                                },
-                                __source: {
-                                    fileName: "src/components/band-view/band-view.jsx",
-                                    lineNumber: 81
-                                },
-                                __self: this,
-                                children: "Back to bands"
-                            })
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                            __source: {
-                                fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 83
-                            },
-                            __self: this
-                        })
-                    ]
-                })
-            ]
-        }));
-    }
-}
-BandView.propTypes = {
-    band: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Description: _propTypesDefault.default.string.isRequired
-        }),
-        Label: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Bio: _propTypesDefault.default.string.isRequired,
-            Creation: _propTypesDefault.default.number.isRequired,
-            Country: _propTypesDefault.default.string
-        }),
-        Country: _propTypesDefault.default.string.isRequired,
-        Continent: _propTypesDefault.default.string,
-        Creation: _propTypesDefault.default.number.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired,
-        Active: _propTypesDefault.default.bool
-    }).isRequired
-};
-exports.default = BandView;
-
-  $parcel$ReactRefreshHelpers$a1de.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./band-view.scss":"9aEAp","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","axios":"iYoWk","react-router-dom":"cpyQW"}],"9aEAp":[function() {},{}],"054li":[function(require,module,exports) {
+},{"react-is":"5wFcP"}],"054li":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$02dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40636,7 +40472,171 @@ $RefreshReg$(_c, "RegistrationView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./registration-view.scss":"fr9ZP","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","axios":"iYoWk"}],"fr9ZP":[function() {},{}],"8WCoL":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./registration-view.scss":"fr9ZP","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","axios":"iYoWk"}],"fr9ZP":[function() {},{}],"f04ca":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4a51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4a51.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BandCard", ()=>BandCard
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactBootstrap = require("react-bootstrap");
+var _bandCardScss = require("./band-card.scss");
+var _reactRouterDom = require("react-router-dom");
+class BandCard extends _reactDefault.default.Component {
+    render() {
+        const { band  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
+            className: "band-card w-25",
+            __source: {
+                fileName: "src/components/band-card/band-card.jsx",
+                lineNumber: 14
+            },
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
+                __source: {
+                    fileName: "src/components/band-card/band-card.jsx",
+                    lineNumber: 15
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                    className: "my-band-card",
+                    __source: {
+                        fileName: "src/components/band-card/band-card.jsx",
+                        lineNumber: 16
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
+                        className: " d-block",
+                        __source: {
+                            fileName: "src/components/band-card/band-card.jsx",
+                            lineNumber: 17
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+                            style: {
+                                width: '18rem'
+                            },
+                            className: "bandCard text-center",
+                            bg: "dark",
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 18
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
+                                    className: "cardImage",
+                                    variant: "top",
+                                    src: band.ImagePath,
+                                    __source: {
+                                        fileName: "src/components/band-card/band-card.jsx",
+                                        lineNumber: 19
+                                    },
+                                    __self: this
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
+                                    __source: {
+                                        fileName: "src/components/band-card/band-card.jsx",
+                                        lineNumber: 20
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
+                                            className: "cardTitle",
+                                            style: {
+                                                "font-size": "35px",
+                                                color: "black"
+                                            },
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 21
+                                            },
+                                            __self: this,
+                                            children: band.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
+                                            className: "mb-2 text-muted",
+                                            style: {
+                                                "font-size": "25px"
+                                            },
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 22
+                                            },
+                                            __self: this,
+                                            children: band.Genre.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 23
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                                to: `/bands/${band._id}`,
+                                                __source: {
+                                                    fileName: "src/components/band-card/band-card.jsx",
+                                                    lineNumber: 24
+                                                },
+                                                __self: this,
+                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                    variant: "secondary",
+                                                    __source: {
+                                                        fileName: "src/components/band-card/band-card.jsx",
+                                                        lineNumber: 25
+                                                    },
+                                                    __self: this,
+                                                    children: "More Details"
+                                                })
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    })
+                })
+            })
+        }));
+    }
+}
+BandCard.propTypes = {
+    band: _propTypesDefault.default.shape({
+        Name: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Genre: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired,
+            Description: _propTypesDefault.default.string.isRequired
+        }),
+        Label: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired,
+            Bio: _propTypesDefault.default.string.isRequired,
+            Creation: _propTypesDefault.default.number.isRequired,
+            Country: _propTypesDefault.default.string
+        }),
+        Country: _propTypesDefault.default.string.isRequired,
+        Continent: _propTypesDefault.default.string,
+        Creation: _propTypesDefault.default.number.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired,
+        Active: _propTypesDefault.default.bool
+    }).isRequired
+};
+
+  $parcel$ReactRefreshHelpers$4a51.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","./band-card.scss":"1C32R","@parcel/transformer-js/src/esmodule-helpers.js":"40prZ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"l6RLv","react-router-dom":"cpyQW"}],"1C32R":[function() {},{}],"8WCoL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5f0a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
