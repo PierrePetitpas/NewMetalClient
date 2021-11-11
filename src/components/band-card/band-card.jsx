@@ -31,7 +31,6 @@ export class BandCard extends React.Component {
             </Col>
           </Row>
         </Container>
-
       
       );
     }
