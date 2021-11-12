@@ -91,7 +91,7 @@ class MainView extends React.Component {
            
      <Router>
                 
-                <div className="main-view">
+              
                 <NavBar user={user} />
 
                     
@@ -163,7 +163,7 @@ class MainView extends React.Component {
                     }
                     } />
 
-                    </div>
+                    
 
             </Router>
 

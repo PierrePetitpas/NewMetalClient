@@ -109,15 +109,16 @@ hr {
   padding: 15px;
 }
 
-.band-card {
+.bandcard {
   float: left;
+  font-family: "Pirata One", cursive;
 }
 
 .my-band-card {
   font-family: "Pirata One", cursive;
 }
 
-.cardTitle {
+.card-title {
   font-size: 35px;
   color: black;
 }

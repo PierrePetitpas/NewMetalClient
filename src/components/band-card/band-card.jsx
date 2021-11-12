@@ -28,11 +28,9 @@ export class BandCard extends React.Component {
 
         return (
           
-          <Container className="band-card w-25">
-          <Row>
-            <Col className="my-band-card" >
-              <CardGroup className=" d-block">
-                <Card style={{ width: '18rem' }}  className="bandCard text-center" bg= "dark">
+          
+         
+                <Card style={{ width: '18rem', 'font-family': 'Pirata One, cursive' }}  className="bandCard text-center" bg= "dark">
                   <Card.Img className="cardImage" variant="top" src={band.ImagePath} />
                   <Card.Body>
                     <Card.Title className="cardTitle" style={{"font-size": "35px", color: "black"}}>{band.Name}</Card.Title>
@@ -42,15 +40,14 @@ export class BandCard extends React.Component {
                     <Button variant="secondary">More Details</Button>
                     </Link>
                     </div>
+                    <br></br>
                     <div>
                     <Button variant="secondary" value={band._id} onClick={(e) => this.addFavorite(e, band)}>Add to favorites</Button>
                     </div>
                   </Card.Body>
                 </Card>
-              </CardGroup>
-            </Col>
-          </Row>
-        </Container>
+            
+        
 
       
       );

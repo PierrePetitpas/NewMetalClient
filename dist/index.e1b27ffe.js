@@ -22838,181 +22838,172 @@ class MainView extends _reactDefault.default.Component {
     render() {
         const { user: user1 , register  } = this.state;
         let { bands  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.HashRouter, {
+        return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.HashRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
                 lineNumber: 92,
                 columnNumber: 6
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                className: "main-view",
-                __source: {
-                    fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 94,
-                    columnNumber: 17
-                },
-                __self: this,
-                children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(_navBarDefault.default, {
-                        user: user1,
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 95,
-                            columnNumber: 17
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        exact: true,
-                        path: "/",
-                        render: ()=>{
-                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_navBarDefault.default, {
+                    user: user1,
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 95,
+                        columnNumber: 17
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    exact: true,
+                    path: "/",
+                    render: ()=>{
+                        if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                            onLoggedIn: (user)=>this.onLoggedIn(user)
+                        }));
+                        if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "main-view"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_bandsListDefault.default, {
+                            bands: bands
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 98,
+                        columnNumber: 17
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    path: "/bands/:bandId",
+                    render: ({ match , history  })=>{
+                        if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                                 onLoggedIn: (user)=>this.onLoggedIn(user)
-                            }));
-                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_bandsListDefault.default, {
-                                bands: bands
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 98,
-                            columnNumber: 17
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/bands/:bandId",
-                        render: ({ match , history  })=>{
-                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                            })
+                        }));
+                        if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "main-view"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_bandView.BandView, {
+                                band: bands.find((m)=>m._id === match.params.bandId
+                                ),
+                                onBackClick: ()=>history.goBack()
+                            })
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 107,
+                        columnNumber: 21
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    path: "/register",
+                    render: ()=>{
+                        if (user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                            to: "/"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
+                            })
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 118,
+                        columnNumber: 21
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    path: "/genres/:name",
+                    render: ({ match , history  })=>{
+                        console.log(match);
+                        if (!user1) return;
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                                     onLoggedIn: (user)=>this.onLoggedIn(user)
-                                })
-                            }));
-                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_bandView.BandView, {
-                                    band: bands.find((m)=>m._id === match.params.bandId
-                                    ),
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 107,
-                            columnNumber: 21
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/register",
-                        render: ()=>{
-                            if (user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                to: "/"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 118,
-                            columnNumber: 21
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/genres/:name",
-                        render: ({ match , history  })=>{
-                            console.log(match);
-                            if (!user1) return;
-                            /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
-                                        onLoggedIn: (user)=>this.onLoggedIn(user)
-                                    }),
-                                    ";"
-                                ]
-                            });
-                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_genreView.GenreView, {
-                                    genre: bands.find((m)=>m.Genre.Name === match.params.name
-                                    ).Genre,
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 125,
-                            columnNumber: 21
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/labels/:name",
-                        render: ({ match , history  })=>{
-                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                })
-                            }));
-                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_labelView.LabelView, {
-                                    label: bands.find((m)=>m.Label.Name === match.params.name
-                                    ).Label,
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 140,
-                            columnNumber: 19
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/users/:username",
-                        render: ({ match , history  })=>{
-                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
-                                    onLoggedIn: (user)=>this.onLoggedIn(user)
-                                })
-                            }));
-                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
-                                    bands: bands,
-                                    user: user1,
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 153,
-                            columnNumber: 21
-                        },
-                        __self: this
-                    })
-                ]
-            })
+                                }),
+                                ";"
+                            ]
+                        });
+                        if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "main-view"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_genreView.GenreView, {
+                                genre: bands.find((m)=>m.Genre.Name === match.params.name
+                                ).Genre,
+                                onBackClick: ()=>history.goBack()
+                            })
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 125,
+                        columnNumber: 21
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    path: "/labels/:name",
+                    render: ({ match , history  })=>{
+                        if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            })
+                        }));
+                        if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "main-view"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_labelView.LabelView, {
+                                label: bands.find((m)=>m.Label.Name === match.params.name
+                                ).Label,
+                                onBackClick: ()=>history.goBack()
+                            })
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 140,
+                        columnNumber: 19
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                    path: "/users/:username",
+                    render: ({ match , history  })=>{
+                        if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                                onLoggedIn: (user)=>this.onLoggedIn(user)
+                            })
+                        }));
+                        if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "main-view"
+                        }));
+                        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
+                                bands: bands,
+                                user: user1,
+                                onBackClick: ()=>history.goBack()
+                            })
+                        }));
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 153,
+                        columnNumber: 21
+                    },
+                    __self: this
+                })
+            ]
         }));
     }
 }
@@ -43173,151 +43164,125 @@ class BandCard extends _reactDefault.default.Component {
     }
     render() {
         const { band  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
-            className: "band-card w-25",
+        return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+            style: {
+                width: '18rem',
+                'font-family': 'Pirata One, cursive'
+            },
+            className: "bandCard text-center",
+            bg: "dark",
             __source: {
                 fileName: "src/components/band-card/band-card.jsx",
-                lineNumber: 31,
-                columnNumber: 11
+                lineNumber: 33,
+                columnNumber: 17
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
-                __source: {
-                    fileName: "src/components/band-card/band-card.jsx",
-                    lineNumber: 32,
-                    columnNumber: 11
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                    className: "my-band-card",
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
+                    className: "cardImage",
+                    variant: "top",
+                    src: band.ImagePath,
                     __source: {
                         fileName: "src/components/band-card/band-card.jsx",
-                        lineNumber: 33,
-                        columnNumber: 13
+                        lineNumber: 34,
+                        columnNumber: 19
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
+                    __source: {
+                        fileName: "src/components/band-card/band-card.jsx",
+                        lineNumber: 35,
+                        columnNumber: 19
                     },
                     __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
-                        className: " d-block",
-                        __source: {
-                            fileName: "src/components/band-card/band-card.jsx",
-                            lineNumber: 34,
-                            columnNumber: 15
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
+                            className: "cardTitle",
                             style: {
-                                width: '18rem'
+                                "font-size": "35px",
+                                color: "black"
                             },
-                            className: "bandCard text-center",
-                            bg: "dark",
                             __source: {
                                 fileName: "src/components/band-card/band-card.jsx",
-                                lineNumber: 35,
-                                columnNumber: 17
+                                lineNumber: 36,
+                                columnNumber: 21
                             },
                             __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
-                                    className: "cardImage",
-                                    variant: "top",
-                                    src: band.ImagePath,
+                            children: band.Name
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
+                            className: "mb-2 text-muted",
+                            style: {
+                                "font-size": "25px"
+                            },
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 37,
+                                columnNumber: 21
+                            },
+                            __self: this,
+                            children: band.Genre.Name
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 38,
+                                columnNumber: 21
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                to: `/bands/${band._id}`,
+                                __source: {
+                                    fileName: "src/components/band-card/band-card.jsx",
+                                    lineNumber: 39,
+                                    columnNumber: 21
+                                },
+                                __self: this,
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                    variant: "secondary",
                                     __source: {
                                         fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 36,
-                                        columnNumber: 19
-                                    },
-                                    __self: this
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 37,
-                                        columnNumber: 19
+                                        lineNumber: 40,
+                                        columnNumber: 21
                                     },
                                     __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
-                                            className: "cardTitle",
-                                            style: {
-                                                "font-size": "35px",
-                                                color: "black"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 38,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: band.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
-                                            className: "mb-2 text-muted",
-                                            style: {
-                                                "font-size": "25px"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 39,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: band.Genre.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 40,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                                to: `/bands/${band._id}`,
-                                                __source: {
-                                                    fileName: "src/components/band-card/band-card.jsx",
-                                                    lineNumber: 41,
-                                                    columnNumber: 21
-                                                },
-                                                __self: this,
-                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                    variant: "secondary",
-                                                    __source: {
-                                                        fileName: "src/components/band-card/band-card.jsx",
-                                                        lineNumber: 42,
-                                                        columnNumber: 21
-                                                    },
-                                                    __self: this,
-                                                    children: "More Details"
-                                                })
-                                            })
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 45,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                variant: "secondary",
-                                                value: band._id,
-                                                onClick: (e)=>this.addFavorite(e, band)
-                                                ,
-                                                __source: {
-                                                    fileName: "src/components/band-card/band-card.jsx",
-                                                    lineNumber: 46,
-                                                    columnNumber: 21
-                                                },
-                                                __self: this,
-                                                children: "Add to favorites"
-                                            })
-                                        })
-                                    ]
+                                    children: "More Details"
                                 })
-                            ]
+                            })
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 43,
+                                columnNumber: 21
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 44,
+                                columnNumber: 21
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                variant: "secondary",
+                                value: band._id,
+                                onClick: (e)=>this.addFavorite(e, band)
+                                ,
+                                __source: {
+                                    fileName: "src/components/band-card/band-card.jsx",
+                                    lineNumber: 45,
+                                    columnNumber: 21
+                                },
+                                __self: this,
+                                children: "Add to favorites"
+                            })
                         })
-                    })
+                    ]
                 })
-            })
+            ]
         }));
     }
 }
@@ -43436,48 +43401,60 @@ function BandsList(props) {
         },
         __self: this
     }));
-    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
-        children: [
-            /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                md: 4,
-                style: {
-                    margin: '1em'
-                },
-                __source: {
-                    fileName: "src/components/bands-list/bands-list.jsx",
-                    lineNumber: 28,
-                    columnNumber: 9
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
-                    visibilityFilter: visibilityFilter,
-                    __source: {
-                        fileName: "src/components/bands-list/bands-list.jsx",
-                        lineNumber: 29,
-                        columnNumber: 13
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
+        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+            __source: {
+                fileName: "src/components/bands-list/bands-list.jsx",
+                lineNumber: 27,
+                columnNumber: 5
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                    md: 12,
+                    style: {
+                        margin: '1em'
                     },
-                    __self: this
-                })
-            }),
-            filteredBands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     __source: {
                         fileName: "src/components/bands-list/bands-list.jsx",
-                        lineNumber: 32,
-                        columnNumber: 13
+                        lineNumber: 28,
+                        columnNumber: 9
                     },
                     __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_bandCard.BandCard, {
-                        band: m,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
+                        visibilityFilter: visibilityFilter,
                         __source: {
                             fileName: "src/components/bands-list/bands-list.jsx",
-                            lineNumber: 33,
-                            columnNumber: 17
+                            lineNumber: 29,
+                            columnNumber: 13
                         },
                         __self: this
                     })
-                }, m._id)
-            )
-        ]
+                }),
+                filteredBands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                        style: {
+                            'padding-bottom': '15px',
+                            'padding-left': '30px'
+                        },
+                        __source: {
+                            fileName: "src/components/bands-list/bands-list.jsx",
+                            lineNumber: 32,
+                            columnNumber: 13
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsx(_bandCard.BandCard, {
+                            band: m,
+                            __source: {
+                                fileName: "src/components/bands-list/bands-list.jsx",
+                                lineNumber: 33,
+                                columnNumber: 17
+                            },
+                            __self: this
+                        })
+                    }, m._id)
+                )
+            ]
+        })
     }));
 }
 _c = BandsList;

@@ -24,15 +24,17 @@ function BandsList(props) {
     if (!bands) return <div className="main-view"/>;
 
     return <>
-   
-        <Col md={4} style= {{margin: '1em'}}>
+    <Row>
+        <Col md={12} style= {{margin: '1em'}}>
             <VisibilityFilterInput visibilityFilter={visibilityFilter}/>
         </Col>
             {filteredBands.map(m => (
-            <Col key={m._id}>
+            <Col key={m._id} style= {{'padding-bottom': '15px', 'padding-left': '30px'}}>
                 <BandCard band={m}/>
             </Col>
+          
         ))}
+         </Row> 
         </>;
 }
 
