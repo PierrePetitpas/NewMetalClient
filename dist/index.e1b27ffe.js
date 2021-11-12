@@ -43401,44 +43401,64 @@ function BandsList(props) {
         },
         __self: this
     }));
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
-        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
-            __source: {
-                fileName: "src/components/bands-list/bands-list.jsx",
-                lineNumber: 27,
-                columnNumber: 5
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                    md: 12,
-                    style: {
-                        margin: '1em'
-                    },
-                    __source: {
-                        fileName: "src/components/bands-list/bands-list.jsx",
-                        lineNumber: 28,
-                        columnNumber: 9
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
-                        visibilityFilter: visibilityFilter,
+    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
+                __source: {
+                    fileName: "src/components/bands-list/bands-list.jsx",
+                    lineNumber: 27,
+                    columnNumber: 5
+                },
+                __self: this,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                        xl: 7,
+                        __source: {
+                            fileName: "src/components/bands-list/bands-list.jsx",
+                            lineNumber: 28,
+                            columnNumber: 10
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                        xl: 4,
+                        style: {
+                            margin: '1em'
+                        },
+                        "float-left": true,
                         __source: {
                             fileName: "src/components/bands-list/bands-list.jsx",
                             lineNumber: 29,
-                            columnNumber: 13
+                            columnNumber: 9
                         },
-                        __self: this
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
+                            visibilityFilter: visibilityFilter,
+                            __source: {
+                                fileName: "src/components/bands-list/bands-list.jsx",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            },
+                            __self: this
+                        })
                     })
-                }),
-                filteredBands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
+                __source: {
+                    fileName: "src/components/bands-list/bands-list.jsx",
+                    lineNumber: 33,
+                    columnNumber: 5
+                },
+                __self: this,
+                children: filteredBands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                         style: {
                             'padding-bottom': '15px',
                             'padding-left': '30px'
                         },
                         __source: {
                             fileName: "src/components/bands-list/bands-list.jsx",
-                            lineNumber: 32,
+                            lineNumber: 35,
                             columnNumber: 13
                         },
                         __self: this,
@@ -43446,15 +43466,15 @@ function BandsList(props) {
                             band: m,
                             __source: {
                                 fileName: "src/components/bands-list/bands-list.jsx",
-                                lineNumber: 33,
+                                lineNumber: 36,
                                 columnNumber: 17
                             },
                             __self: this
                         })
                     }, m._id)
                 )
-            ]
-        })
+            })
+        ]
     }));
 }
 _c = BandsList;
@@ -43538,94 +43558,95 @@ class NavBar extends _reactDefault.default.Component {
     render() {
         const { user  } = this.props;
         if (!user) return null;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
-            className: "main-view hide-nav",
+        return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Navbar, {
+            collapseOnSelect: true,
+            expand: "lg",
+            bg: "dark",
+            variant: "dark",
+            expand: "lg",
             __source: {
                 fileName: "src/components/nav-bar/nav-bar.jsx",
-                lineNumber: 24,
+                lineNumber: 25,
                 columnNumber: 9
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Navbar, {
-                collapseOnSelect: true,
-                expand: "lg",
-                bg: "dark",
-                variant: "dark",
-                expand: "lg",
-                __source: {
-                    fileName: "src/components/nav-bar/nav-bar.jsx",
-                    lineNumber: 26,
-                    columnNumber: 9
-                },
-                __self: this,
-                children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Brand, {
-                        href: "#",
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Brand, {
+                    className: " align-left",
+                    href: "#",
+                    __source: {
+                        fileName: "src/components/nav-bar/nav-bar.jsx",
+                        lineNumber: 27,
+                        columnNumber: 17
+                    },
+                    __self: this,
+                    children: "My Metal Site"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Toggle, {
+                    "aria-controls": "responsive-navbar-nav",
+                    __source: {
+                        fileName: "src/components/nav-bar/nav-bar.jsx",
+                        lineNumber: 28,
+                        columnNumber: 17
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Collapse, {
+                    id: "responsive-navbar-nav",
+                    __source: {
+                        fileName: "src/components/nav-bar/nav-bar.jsx",
+                        lineNumber: 29,
+                        columnNumber: 17
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Nav, {
+                        className: "ml-auto",
                         __source: {
                             fileName: "src/components/nav-bar/nav-bar.jsx",
-                            lineNumber: 27,
+                            lineNumber: 30,
                             columnNumber: 17
                         },
                         __self: this,
-                        children: "My Metal Site"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Collapse, {
-                        id: "responsive-navbar-nav",
-                        __source: {
-                            fileName: "src/components/nav-bar/nav-bar.jsx",
-                            lineNumber: 28,
-                            columnNumber: 17
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Nav, {
-                            className: "ml-auto",
-                            __source: {
-                                fileName: "src/components/nav-bar/nav-bar.jsx",
-                                lineNumber: 29,
-                                columnNumber: 17
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
-                                    as: _reactRouterDom.Link,
-                                    to: '/',
-                                    __source: {
-                                        fileName: "src/components/nav-bar/nav-bar.jsx",
-                                        lineNumber: 30,
-                                        columnNumber: 17
-                                    },
-                                    __self: this,
-                                    children: "Bands"
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
-                                    as: _reactRouterDom.Link,
-                                    to: `/users/${user}`,
-                                    __source: {
-                                        fileName: "src/components/nav-bar/nav-bar.jsx",
-                                        lineNumber: 31,
-                                        columnNumber: 17
-                                    },
-                                    __self: this,
-                                    children: "Profile"
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
-                                    href: "/",
-                                    onClick: ()=>{
-                                        this.onLoggedOut();
-                                    },
-                                    __source: {
-                                        fileName: "src/components/nav-bar/nav-bar.jsx",
-                                        lineNumber: 32,
-                                        columnNumber: 17
-                                    },
-                                    __self: this,
-                                    children: "Logout"
-                                })
-                            ]
-                        })
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
+                                as: _reactRouterDom.Link,
+                                to: '/',
+                                __source: {
+                                    fileName: "src/components/nav-bar/nav-bar.jsx",
+                                    lineNumber: 31,
+                                    columnNumber: 17
+                                },
+                                __self: this,
+                                children: "Bands"
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
+                                as: _reactRouterDom.Link,
+                                to: `/users/${user}`,
+                                __source: {
+                                    fileName: "src/components/nav-bar/nav-bar.jsx",
+                                    lineNumber: 32,
+                                    columnNumber: 17
+                                },
+                                __self: this,
+                                children: "Profile"
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
+                                href: "/",
+                                onClick: ()=>{
+                                    this.onLoggedOut();
+                                },
+                                __source: {
+                                    fileName: "src/components/nav-bar/nav-bar.jsx",
+                                    lineNumber: 33,
+                                    columnNumber: 17
+                                },
+                                __self: this,
+                                children: "Logout"
+                            })
+                        ]
                     })
-                ]
-            })
+                })
+            ]
         }));
     }
 }

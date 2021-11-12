@@ -21,10 +21,11 @@ export class NavBar extends React.Component {
     if (!user) return null;
 
     return (
-        <Container className="main-view hide-nav">
-          
+        
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" expand="lg" >
-                <Navbar.Brand href="#">My Metal Site</Navbar.Brand>
+          
+                <Navbar.Brand className=" align-left" href="#">My Metal Site</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto">
                 <Nav.Link as={Link} to={'/'}>Bands</Nav.Link>
@@ -32,8 +33,9 @@ export class NavBar extends React.Component {
                 <Nav.Link href="/" onClick={() => { this.onLoggedOut() }} >Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-    </Navbar>
-        </Container>
+            
+        </Navbar>
+      
     );
   }
 }
