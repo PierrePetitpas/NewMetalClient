@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 
 export class BandView extends React.Component {
+ 
 
     render(){
         const { user, band, onBackClick} = this.props;
@@ -88,7 +89,7 @@ export class BandView extends React.Component {
     
 }
 
-BandView.propTypes = {
+/*BandView.propTypes = {
     band: PropTypes.shape({
       Name: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
@@ -108,6 +109,6 @@ BandView.propTypes = {
       ImagePath: PropTypes.string.isRequired,
       Active: PropTypes.bool
     }).isRequired,
-  };
+  };*/
 
   export default BandView;

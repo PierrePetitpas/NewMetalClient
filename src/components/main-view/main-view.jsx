@@ -105,6 +105,11 @@ class MainView extends React.Component {
                     }} />
 
                     <Route path="/bands/:bandId" render={({match, history })  => {
+                         if (!user) return <Col>
+                         <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+                         </Col>
+ 
+                         if (bands.length === 0) return <div className="main-view" />;
                             return <Col>
                                 <BandView band={bands.find(m => m._id === match.params.bandId)} onBackClick={() => history.goBack()} />
                                 </Col>

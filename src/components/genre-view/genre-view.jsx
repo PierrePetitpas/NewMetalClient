@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BandView } from '../band-view/band-view';
-import { BandCard } from '../band-card/band-card';
 import { Link } from "react-router-dom";
 
 import './genre-view.scss';

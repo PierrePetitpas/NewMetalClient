@@ -22887,6 +22887,14 @@ class MainView extends _reactDefault.default.Component {
                     /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
                         path: "/bands/:bandId",
                         render: ({ match , history  })=>{
+                            if (!user1) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
+                                    onLoggedIn: (user)=>this.onLoggedIn(user)
+                                })
+                            }));
+                            if (bands.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
                             return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                                 children: /*#__PURE__*/ _jsxRuntime.jsx(_bandView.BandView, {
                                     band: bands.find((m)=>m._id === match.params.bandId
@@ -22915,7 +22923,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 113,
+                            lineNumber: 118,
                             columnNumber: 21
                         },
                         __self: this
@@ -22946,7 +22954,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 120,
+                            lineNumber: 125,
                             columnNumber: 21
                         },
                         __self: this
@@ -22972,7 +22980,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 135,
+                            lineNumber: 140,
                             columnNumber: 19
                         },
                         __self: this
@@ -22998,7 +23006,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 148,
+                            lineNumber: 153,
                             columnNumber: 21
                         },
                         __self: this
@@ -39438,7 +39446,7 @@ class BandView extends _reactDefault.default.Component {
             className: "myband-view",
             __source: {
                 fileName: "src/components/band-view/band-view.jsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 13
             },
             __self: this,
@@ -39446,7 +39454,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 24,
+                        lineNumber: 25,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39455,7 +39463,7 @@ class BandView extends _reactDefault.default.Component {
                         xs: 12,
                         __source: {
                             fileName: "src/components/band-view/band-view.jsx",
-                            lineNumber: 25,
+                            lineNumber: 26,
                             columnNumber: 21
                         },
                         __self: this,
@@ -39463,7 +39471,7 @@ class BandView extends _reactDefault.default.Component {
                             src: band.ImagePath,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 26,
+                                lineNumber: 27,
                                 columnNumber: 25
                             },
                             __self: this
@@ -39473,7 +39481,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 17
                     },
                     __self: this
@@ -39481,7 +39489,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39490,7 +39498,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39500,7 +39508,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 32,
+                                lineNumber: 33,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39509,7 +39517,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 33,
+                                        lineNumber: 34,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39519,7 +39527,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 34,
+                                        lineNumber: 35,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39532,7 +39540,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 36,
+                                lineNumber: 37,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39541,7 +39549,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 37,
+                                        lineNumber: 38,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39551,7 +39559,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 39,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39563,7 +39571,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 40,
+                                lineNumber: 41,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39573,7 +39581,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 42,
+                        lineNumber: 43,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39582,7 +39590,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 43,
+                                lineNumber: 44,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39592,7 +39600,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39601,7 +39609,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 45,
+                                        lineNumber: 46,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39611,7 +39619,7 @@ class BandView extends _reactDefault.default.Component {
                                     to: `/genres/${band.Genre.Name}`,
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 46,
+                                        lineNumber: 47,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39621,7 +39629,7 @@ class BandView extends _reactDefault.default.Component {
                                         variant: "link",
                                         __source: {
                                             fileName: "src/components/band-view/band-view.jsx",
-                                            lineNumber: 47,
+                                            lineNumber: 48,
                                             columnNumber: 21
                                         },
                                         __self: this,
@@ -39635,7 +39643,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 50,
+                                lineNumber: 51,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39644,7 +39652,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 51,
+                                        lineNumber: 52,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39654,7 +39662,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 52,
+                                        lineNumber: 53,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39666,7 +39674,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 54,
+                                lineNumber: 55,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39676,7 +39684,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39685,7 +39693,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39695,7 +39703,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39704,7 +39712,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 59,
+                                        lineNumber: 60,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39714,7 +39722,7 @@ class BandView extends _reactDefault.default.Component {
                                     to: `/labels/${band.Label.Name}`,
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 60,
+                                        lineNumber: 61,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39724,7 +39732,7 @@ class BandView extends _reactDefault.default.Component {
                                         className: "label-button",
                                         __source: {
                                             fileName: "src/components/band-view/band-view.jsx",
-                                            lineNumber: 61,
+                                            lineNumber: 62,
                                             columnNumber: 21
                                         },
                                         __self: this,
@@ -39738,7 +39746,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 64,
+                                lineNumber: 65,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39747,7 +39755,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-span",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 65,
+                                        lineNumber: 66,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39757,7 +39765,7 @@ class BandView extends _reactDefault.default.Component {
                                     className: "label-value",
                                     __source: {
                                         fileName: "src/components/band-view/band-view.jsx",
-                                        lineNumber: 66,
+                                        lineNumber: 67,
                                         columnNumber: 21
                                     },
                                     __self: this,
@@ -39769,7 +39777,7 @@ class BandView extends _reactDefault.default.Component {
                             sm: 2,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39779,7 +39787,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 70,
+                        lineNumber: 71,
                         columnNumber: 17
                     },
                     __self: this
@@ -39787,7 +39795,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 71,
+                        lineNumber: 72,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39796,7 +39804,7 @@ class BandView extends _reactDefault.default.Component {
                             xs: 1,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 72,
+                                lineNumber: 73,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39806,7 +39814,7 @@ class BandView extends _reactDefault.default.Component {
                             xs: 10,
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39814,7 +39822,7 @@ class BandView extends _reactDefault.default.Component {
                                 className: "label-value",
                                 __source: {
                                     fileName: "src/components/band-view/band-view.jsx",
-                                    lineNumber: 74,
+                                    lineNumber: 75,
                                     columnNumber: 21
                                 },
                                 __self: this,
@@ -39826,7 +39834,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 77,
+                        lineNumber: 78,
                         columnNumber: 17
                     },
                     __self: this
@@ -39834,7 +39842,7 @@ class BandView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/band-view/band-view.jsx",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 17
                     },
                     __self: this,
@@ -39842,7 +39850,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 79,
+                                lineNumber: 80,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39851,7 +39859,7 @@ class BandView extends _reactDefault.default.Component {
                             className: "back-button",
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 80,
+                                lineNumber: 81,
                                 columnNumber: 21
                             },
                             __self: this,
@@ -39862,7 +39870,7 @@ class BandView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/band-view/band-view.jsx",
-                                    lineNumber: 81,
+                                    lineNumber: 82,
                                     columnNumber: 25
                                 },
                                 __self: this,
@@ -39872,7 +39880,7 @@ class BandView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/band-view/band-view.jsx",
-                                lineNumber: 83,
+                                lineNumber: 84,
                                 columnNumber: 21
                             },
                             __self: this
@@ -39883,27 +39891,6 @@ class BandView extends _reactDefault.default.Component {
         }));
     }
 }
-BandView.propTypes = {
-    band: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Description: _propTypesDefault.default.string.isRequired
-        }),
-        Label: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Bio: _propTypesDefault.default.string.isRequired,
-            Creation: _propTypesDefault.default.number.isRequired,
-            Country: _propTypesDefault.default.string
-        }),
-        Country: _propTypesDefault.default.string.isRequired,
-        Continent: _propTypesDefault.default.string,
-        Creation: _propTypesDefault.default.number.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired,
-        Active: _propTypesDefault.default.bool
-    }).isRequired
-};
 exports.default = BandView;
 
   $parcel$ReactRefreshHelpers$6f20.postlude(module);
@@ -41980,7 +41967,6 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _bandView = require("../band-view/band-view");
-var _bandCard = require("../band-card/band-card");
 var _reactRouterDom = require("react-router-dom");
 var _genreViewScss = require("./genre-view.scss");
 var _reactBootstrap = require("react-bootstrap");
@@ -41991,7 +41977,7 @@ class GenreView extends _reactDefault.default.Component {
             className: "genre-view",
             __source: {
                 fileName: "src/components/genre-view/genre-view.jsx",
-                lineNumber: 16,
+                lineNumber: 15,
                 columnNumber: 9
             },
             __self: this,
@@ -41999,7 +41985,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 18,
+                        lineNumber: 17,
                         columnNumber: 9
                     },
                     __self: this,
@@ -42007,7 +41993,7 @@ class GenreView extends _reactDefault.default.Component {
                         xs: 12,
                         __source: {
                             fileName: "src/components/genre-view/genre-view.jsx",
-                            lineNumber: 19,
+                            lineNumber: 18,
                             columnNumber: 13
                         },
                         __self: this
@@ -42016,7 +42002,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 21,
+                        lineNumber: 20,
                         columnNumber: 9
                     },
                     __self: this
@@ -42024,7 +42010,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 22,
+                        lineNumber: 21,
                         columnNumber: 9
                     },
                     __self: this,
@@ -42033,7 +42019,7 @@ class GenreView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 23,
+                                lineNumber: 22,
                                 columnNumber: 13
                             },
                             __self: this
@@ -42043,7 +42029,7 @@ class GenreView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 24,
+                                lineNumber: 23,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -42051,7 +42037,7 @@ class GenreView extends _reactDefault.default.Component {
                                 className: "genre-value",
                                 __source: {
                                     fileName: "src/components/genre-view/genre-view.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 24,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -42062,7 +42048,7 @@ class GenreView extends _reactDefault.default.Component {
                             sm: 4,
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 27,
+                                lineNumber: 26,
                                 columnNumber: 13
                             },
                             __self: this
@@ -42072,7 +42058,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 29,
+                        lineNumber: 28,
                         columnNumber: 9
                     },
                     __self: this
@@ -42080,7 +42066,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 30,
+                        lineNumber: 29,
                         columnNumber: 9
                     },
                     __self: this,
@@ -42089,7 +42075,7 @@ class GenreView extends _reactDefault.default.Component {
                             xs: 1,
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 31,
+                                lineNumber: 30,
                                 columnNumber: 13
                             },
                             __self: this
@@ -42099,7 +42085,7 @@ class GenreView extends _reactDefault.default.Component {
                             xs: 10,
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 32,
+                                lineNumber: 31,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -42107,7 +42093,7 @@ class GenreView extends _reactDefault.default.Component {
                                 className: "label-value",
                                 __source: {
                                     fileName: "src/components/genre-view/genre-view.jsx",
-                                    lineNumber: 33,
+                                    lineNumber: 32,
                                     columnNumber: 13
                                 },
                                 __self: this,
@@ -42119,7 +42105,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("hr", {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 36,
+                        lineNumber: 35,
                         columnNumber: 9
                     },
                     __self: this
@@ -42127,7 +42113,7 @@ class GenreView extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 9
                     },
                     __self: this,
@@ -42135,7 +42121,7 @@ class GenreView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 38,
+                                lineNumber: 37,
                                 columnNumber: 13
                             },
                             __self: this
@@ -42144,7 +42130,7 @@ class GenreView extends _reactDefault.default.Component {
                             className: "back-button",
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 39,
+                                lineNumber: 38,
                                 columnNumber: 13
                             },
                             __self: this,
@@ -42155,7 +42141,7 @@ class GenreView extends _reactDefault.default.Component {
                                 },
                                 __source: {
                                     fileName: "src/components/genre-view/genre-view.jsx",
-                                    lineNumber: 40,
+                                    lineNumber: 39,
                                     columnNumber: 17
                                 },
                                 __self: this,
@@ -42165,7 +42151,7 @@ class GenreView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                             __source: {
                                 fileName: "src/components/genre-view/genre-view.jsx",
-                                lineNumber: 42,
+                                lineNumber: 41,
                                 columnNumber: 13
                             },
                             __self: this
@@ -42190,220 +42176,7 @@ GenreView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","../band-view/band-view":"24lHM","../band-card/band-card":"6LIQJ","./genre-view.scss":"hKWHe","react-bootstrap":"9qMdX","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","react-router-dom":"etVME"}],"6LIQJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8856 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8856.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "BandCard", ()=>BandCard
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
-var _bandCardScss = require("./band-card.scss");
-var _reactRouterDom = require("react-router-dom");
-class BandCard extends _reactDefault.default.Component {
-    addFavorite() {
-        const token = localStorage.getItem('token');
-        const username = localStorage.getItem('user');
-        _axiosDefault.default.post(`https://mybands.herokuapp.com/users/${username}/bands/${this.props.band._id}`, {
-        }, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        }).then((response)=>{
-            alert(`Added to Favorites`);
-        }).catch(function(error) {
-            console.log(error);
-        });
-    }
-    render() {
-        const { band  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
-            className: "band-card w-25",
-            __source: {
-                fileName: "src/components/band-card/band-card.jsx",
-                lineNumber: 31,
-                columnNumber: 11
-            },
-            __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
-                __source: {
-                    fileName: "src/components/band-card/band-card.jsx",
-                    lineNumber: 32,
-                    columnNumber: 11
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
-                    className: "my-band-card",
-                    __source: {
-                        fileName: "src/components/band-card/band-card.jsx",
-                        lineNumber: 33,
-                        columnNumber: 13
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
-                        className: " d-block",
-                        __source: {
-                            fileName: "src/components/band-card/band-card.jsx",
-                            lineNumber: 34,
-                            columnNumber: 15
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
-                            style: {
-                                width: '18rem'
-                            },
-                            className: "bandCard text-center",
-                            bg: "dark",
-                            __source: {
-                                fileName: "src/components/band-card/band-card.jsx",
-                                lineNumber: 35,
-                                columnNumber: 17
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
-                                    className: "cardImage",
-                                    variant: "top",
-                                    src: band.ImagePath,
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 36,
-                                        columnNumber: 19
-                                    },
-                                    __self: this
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
-                                    __source: {
-                                        fileName: "src/components/band-card/band-card.jsx",
-                                        lineNumber: 37,
-                                        columnNumber: 19
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
-                                            className: "cardTitle",
-                                            style: {
-                                                "font-size": "35px",
-                                                color: "black"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 38,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: band.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
-                                            className: "mb-2 text-muted",
-                                            style: {
-                                                "font-size": "25px"
-                                            },
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 39,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: band.Genre.Name
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 40,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                                to: `/bands/${band._id}`,
-                                                __source: {
-                                                    fileName: "src/components/band-card/band-card.jsx",
-                                                    lineNumber: 41,
-                                                    columnNumber: 21
-                                                },
-                                                __self: this,
-                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                    variant: "secondary",
-                                                    __source: {
-                                                        fileName: "src/components/band-card/band-card.jsx",
-                                                        lineNumber: 42,
-                                                        columnNumber: 21
-                                                    },
-                                                    __self: this,
-                                                    children: "More Details"
-                                                })
-                                            })
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                            __source: {
-                                                fileName: "src/components/band-card/band-card.jsx",
-                                                lineNumber: 45,
-                                                columnNumber: 21
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                variant: "secondary",
-                                                value: band._id,
-                                                onClick: (e)=>this.addFavorite(e, band)
-                                                ,
-                                                __source: {
-                                                    fileName: "src/components/band-card/band-card.jsx",
-                                                    lineNumber: 46,
-                                                    columnNumber: 21
-                                                },
-                                                __self: this,
-                                                children: "Add to favorites"
-                                            })
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    })
-                })
-            })
-        }));
-    }
-}
-BandCard.propTypes = {
-    band: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Description: _propTypesDefault.default.string.isRequired
-        }),
-        Label: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Bio: _propTypesDefault.default.string.isRequired,
-            Creation: _propTypesDefault.default.number.isRequired,
-            Country: _propTypesDefault.default.string
-        }),
-        Country: _propTypesDefault.default.string.isRequired,
-        Continent: _propTypesDefault.default.string,
-        Creation: _propTypesDefault.default.number.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired,
-        Active: _propTypesDefault.default.bool
-    }).isRequired
-};
-
-  $parcel$ReactRefreshHelpers$8856.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-bootstrap":"9qMdX","./band-card.scss":"5jE33","react-router-dom":"etVME","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","axios":"1IeuP"}],"5jE33":[function() {},{}],"hKWHe":[function() {},{}],"fMjoG":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","../band-view/band-view":"24lHM","./genre-view.scss":"hKWHe","react-bootstrap":"9qMdX","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","react-router-dom":"etVME"}],"hKWHe":[function() {},{}],"fMjoG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e183 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43362,7 +43135,220 @@ exports.default = _reactRedux.connect(mapStateToProps, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","axios":"1IeuP","react-bootstrap":"9qMdX","../band-card/band-card":"6LIQJ","react-router-dom":"etVME","./profile-view.scss":"z96SM","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","react-redux":"lT3ms","../../actions/actions":"6dgbZ"}],"z96SM":[function() {},{}],"6dgbZ":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","axios":"1IeuP","react-bootstrap":"9qMdX","../band-card/band-card":"6LIQJ","react-router-dom":"etVME","./profile-view.scss":"z96SM","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","react-redux":"lT3ms","../../actions/actions":"6dgbZ"}],"6LIQJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8856 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8856.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BandCard", ()=>BandCard
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactBootstrap = require("react-bootstrap");
+var _bandCardScss = require("./band-card.scss");
+var _reactRouterDom = require("react-router-dom");
+class BandCard extends _reactDefault.default.Component {
+    addFavorite() {
+        const token = localStorage.getItem('token');
+        const username = localStorage.getItem('user');
+        _axiosDefault.default.post(`https://mybands.herokuapp.com/users/${username}/bands/${this.props.band._id}`, {
+        }, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            alert(`Added to Favorites`);
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    render() {
+        const { band  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
+            className: "band-card w-25",
+            __source: {
+                fileName: "src/components/band-card/band-card.jsx",
+                lineNumber: 31,
+                columnNumber: 11
+            },
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
+                __source: {
+                    fileName: "src/components/band-card/band-card.jsx",
+                    lineNumber: 32,
+                    columnNumber: 11
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
+                    className: "my-band-card",
+                    __source: {
+                        fileName: "src/components/band-card/band-card.jsx",
+                        lineNumber: 33,
+                        columnNumber: 13
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
+                        className: " d-block",
+                        __source: {
+                            fileName: "src/components/band-card/band-card.jsx",
+                            lineNumber: 34,
+                            columnNumber: 15
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+                            style: {
+                                width: '18rem'
+                            },
+                            className: "bandCard text-center",
+                            bg: "dark",
+                            __source: {
+                                fileName: "src/components/band-card/band-card.jsx",
+                                lineNumber: 35,
+                                columnNumber: 17
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
+                                    className: "cardImage",
+                                    variant: "top",
+                                    src: band.ImagePath,
+                                    __source: {
+                                        fileName: "src/components/band-card/band-card.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 19
+                                    },
+                                    __self: this
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
+                                    __source: {
+                                        fileName: "src/components/band-card/band-card.jsx",
+                                        lineNumber: 37,
+                                        columnNumber: 19
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
+                                            className: "cardTitle",
+                                            style: {
+                                                "font-size": "35px",
+                                                color: "black"
+                                            },
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 38,
+                                                columnNumber: 21
+                                            },
+                                            __self: this,
+                                            children: band.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
+                                            className: "mb-2 text-muted",
+                                            style: {
+                                                "font-size": "25px"
+                                            },
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 39,
+                                                columnNumber: 21
+                                            },
+                                            __self: this,
+                                            children: band.Genre.Name
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 40,
+                                                columnNumber: 21
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                                to: `/bands/${band._id}`,
+                                                __source: {
+                                                    fileName: "src/components/band-card/band-card.jsx",
+                                                    lineNumber: 41,
+                                                    columnNumber: 21
+                                                },
+                                                __self: this,
+                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                    variant: "secondary",
+                                                    __source: {
+                                                        fileName: "src/components/band-card/band-card.jsx",
+                                                        lineNumber: 42,
+                                                        columnNumber: 21
+                                                    },
+                                                    __self: this,
+                                                    children: "More Details"
+                                                })
+                                            })
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                            __source: {
+                                                fileName: "src/components/band-card/band-card.jsx",
+                                                lineNumber: 45,
+                                                columnNumber: 21
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                variant: "secondary",
+                                                value: band._id,
+                                                onClick: (e)=>this.addFavorite(e, band)
+                                                ,
+                                                __source: {
+                                                    fileName: "src/components/band-card/band-card.jsx",
+                                                    lineNumber: 46,
+                                                    columnNumber: 21
+                                                },
+                                                __self: this,
+                                                children: "Add to favorites"
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    })
+                })
+            })
+        }));
+    }
+}
+BandCard.propTypes = {
+    band: _propTypesDefault.default.shape({
+        Name: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Genre: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired,
+            Description: _propTypesDefault.default.string.isRequired
+        }),
+        Label: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired,
+            Bio: _propTypesDefault.default.string.isRequired,
+            Creation: _propTypesDefault.default.number.isRequired,
+            Country: _propTypesDefault.default.string
+        }),
+        Country: _propTypesDefault.default.string.isRequired,
+        Continent: _propTypesDefault.default.string,
+        Creation: _propTypesDefault.default.number.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired,
+        Active: _propTypesDefault.default.bool
+    }).isRequired
+};
+
+  $parcel$ReactRefreshHelpers$8856.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","prop-types":"2bysO","react-bootstrap":"9qMdX","./band-card.scss":"5jE33","react-router-dom":"etVME","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","axios":"1IeuP"}],"5jE33":[function() {},{}],"z96SM":[function() {},{}],"6dgbZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SET_BANDS", ()=>SET_BANDS

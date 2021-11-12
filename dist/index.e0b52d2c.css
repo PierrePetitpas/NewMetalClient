@@ -85,6 +85,18 @@ hr {
   text-align: center;
   margin-left: 50px;
 }
+.genre-view {
+  font-family: "Pirata One", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.label-view {
+  font-family: "Pirata One", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
 .h5 {
   color: black;
 }
@@ -108,18 +120,6 @@ hr {
 .cardTitle {
   font-size: 35px;
   color: black;
-}
-.genre-view {
-  font-family: "Pirata One", cursive;
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
-}
-.label-view {
-  font-family: "Pirata One", cursive;
-  font-size: 35px;
-  font-weight: bold;
-  text-align: center;
 }
 
 html, body {
