@@ -1,6 +1,7 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import { connect } from 'react-redux';
+import VisibilityFilterInput from '../visibility-filter-input/visibility-filter-input';
 
 import { BandCard } from '../band-card/band-card';
 
@@ -19,5 +20,16 @@ function BandsList(props) {
 
     if (!bands) return <div className="main-view"/>;
 
-    return 
+    return <>
+        <Col md={4} style= {{margin: '1em'}}>
+            <VisibilityFilterInput visibilityFilter={visibilityFilter}/>
+        </Col>
+            {filteredBands.map(m => (
+            <Col key={m._id}>
+                <BandCard band={m}/>
+            </Col>
+        ))}
+        </>;
 }
+
+export default connect(mapStateToProps)(BandsList);

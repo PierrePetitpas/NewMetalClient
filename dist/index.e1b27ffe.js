@@ -43453,12 +43453,15 @@ $parcel$ReactRefreshHelpers$a7b6.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _reactRedux = require("react-redux");
+var _visibilityFilterInput = require("../visibility-filter-input/visibility-filter-input");
+var _visibilityFilterInputDefault = parcelHelpers.interopDefault(_visibilityFilterInput);
 var _bandCard = require("../band-card/band-card");
 const mapStateToProps = (state)=>{
     const { visibilityFilter  } = state;
@@ -43475,14 +43478,57 @@ function BandsList(props) {
         className: "main-view",
         __source: {
             fileName: "src/components/bands-list/bands-list.jsx",
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 24
         },
         __self: this
     }));
-    return;
+    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                md: 4,
+                style: {
+                    margin: '1em'
+                },
+                __source: {
+                    fileName: "src/components/bands-list/bands-list.jsx",
+                    lineNumber: 24,
+                    columnNumber: 9
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
+                    visibilityFilter: visibilityFilter,
+                    __source: {
+                        fileName: "src/components/bands-list/bands-list.jsx",
+                        lineNumber: 25,
+                        columnNumber: 13
+                    },
+                    __self: this
+                })
+            }),
+            filteredBands.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                    __source: {
+                        fileName: "src/components/bands-list/bands-list.jsx",
+                        lineNumber: 28,
+                        columnNumber: 13
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_bandCard.BandCard, {
+                        band: m,
+                        __source: {
+                            fileName: "src/components/bands-list/bands-list.jsx",
+                            lineNumber: 29,
+                            columnNumber: 17
+                        },
+                        __self: this
+                    })
+                }, m._id)
+            )
+        ]
+    }));
 }
 _c = BandsList;
+exports.default = _reactRedux.connect(mapStateToProps)(BandsList);
 var _c;
 $RefreshReg$(_c, "BandsList");
 
@@ -43491,7 +43537,49 @@ $RefreshReg$(_c, "BandsList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","react-bootstrap/Col":"kxhZp","react-redux":"lT3ms","../band-card/band-card":"6LIQJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"hlAnh":[function() {},{}],"ifMRI":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","react-bootstrap/Col":"kxhZp","react-redux":"lT3ms","../band-card/band-card":"6LIQJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","../visibility-filter-input/visibility-filter-input":"dyllb"}],"dyllb":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d805 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d805.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _actions = require("../../actions/actions");
+function VisibilityFilterInput(props) {
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+        onChange: (e)=>props.setFilter(e.target.value)
+        ,
+        value: props.visibilityFilter,
+        placeholder: "Filter",
+        __source: {
+            fileName: "src/components/visibility-filter-input/visibility-filter-input.jsx",
+            lineNumber: 9,
+            columnNumber: 10
+        },
+        __self: this
+    }));
+}
+_c = VisibilityFilterInput;
+exports.default = _reactRedux.connect(null, {
+    setFilter: _actions.setFilter
+})(VisibilityFilterInput);
+var _c;
+$RefreshReg$(_c, "VisibilityFilterInput");
+
+  $parcel$ReactRefreshHelpers$d805.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","react-redux":"lT3ms","react-bootstrap/Form":"PeiIB","../../actions/actions":"6dgbZ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"hlAnh":[function() {},{}],"ifMRI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "__DO_NOT_USE__ActionTypes", ()=>ActionTypes
