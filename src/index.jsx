@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainView from './components/main-view/main-view';
+import Container from 'react-bootstrap/Container';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import bandsApp from './reducers/reducers';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
 // Import statement to indicate that you need to bundle index.scss
 import './index.scss';
+
+const store = createStore(bandsApp);
 
 // Main component
 class MyBandApplication extends React.Component {
     render() {
         return (
-            <MainView />
-        );
+            <Provider store={store}>
+                <MainView />
+            </Provider>
+       )
     }
 }
 // Finds the root of my app

@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 import { HashRouter as Router, Route, Routes, Redirect } from 'react-router-dom';
-import { BandCard } from '../band-card/band-card';
+import { connect } from 'react-redux';
 import { BandView } from '../band-view/band-view';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
@@ -12,12 +12,15 @@ import { LabelView } from '../label-view/label-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { Link } from "react-router-dom";
 
-export class MainView extends React.Component {
+import { setBands } from '../../actions/actions';
+import BandsList from '../bands-list/bands-list';
+import DropdownMenu from '@restart/ui/esm/DropdownMenu';
+
+class MainView extends React.Component {
     
     constructor (){
         super();
         this.state = {
-            bands: [],
             selectedBand: null,
             user: null
         }
@@ -58,9 +61,7 @@ export class MainView extends React.Component {
          headers: {Authorization: `Bearer ${token}`}
      })
      .then(response => {
-         this.setState({
-             bands: response.data
-         });
+         this.props.setBands(response.data);
      })
      .catch(function (error){
          console.log(error);
@@ -82,7 +83,8 @@ export class MainView extends React.Component {
   }
 
     render() {
-       const {  user, bands, register } = this.state;
+       const {  user, register } = this.state;
+       let { bands } = this.props;
 
        return (
            
@@ -109,11 +111,7 @@ export class MainView extends React.Component {
                        if (bands.length === 0) return <div className="main-view" />;
                      
 
-                      return bands.map(m => ( 
-                       <Col xs={1}  md={1} lg={12} key={m._id}>
-                        <BandCard band={m}/>  
-                        </Col>
-                        ))
+                      return <BandsList bands= {bands}/>;
                     }} />
 
                     <Route path="/bands/:bandId" render={({match, history })  => {
@@ -178,4 +176,8 @@ export class MainView extends React.Component {
     }
 }
 
-export default MainView;
+let mapStateToProps = state =>{
+    return { bands: state.bands }
+}
+
+export default connect(mapStateToProps, { setBands }) (MainView);

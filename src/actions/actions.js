@@ -1,11 +1,11 @@
-export const SET_MOVIES = 'SET_MOVIES';
+export const SET_BANDS = 'SET_BANDS';
 export const SET_FILTER = 'SET_FILTER';
 export const SET_USER = 'SET_USER';
 export const UPDATE_USER = 'UPDATE_USER';
 
-export function setMovies(value) {
-  console.log('SET_MOVIES action reached');
-  return { type: SET_MOVIES, value };
+export function setBands(value) {
+  console.log('SET_BANDS action reached');
+  return { type: SET_BANDS, value };
 }
 
 export function setFilter(value) {
