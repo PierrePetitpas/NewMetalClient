@@ -1,7 +1,10 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import { connect } from 'react-redux';
+import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 import VisibilityFilterInput from '../visibility-filter-input/visibility-filter-input';
+import { Link } from "react-router-dom";
+
 
 import { BandCard } from '../band-card/band-card';
 
@@ -11,7 +14,7 @@ const mapStateToProps = state => {
 };
 
 function BandsList(props) {
-    const { bands, visibilityFilter } = props;
+    const { user, bands, visibilityFilter } = props;
     let filteredBands = bands;
     
     if (visibilityFilter !== '') {
@@ -21,6 +24,7 @@ function BandsList(props) {
     if (!bands) return <div className="main-view"/>;
 
     return <>
+   
         <Col md={4} style= {{margin: '1em'}}>
             <VisibilityFilterInput visibilityFilter={visibilityFilter}/>
         </Col>

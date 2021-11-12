@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export class BandView extends React.Component {
 
     render(){
-        const { band, onBackClick} = this.props;
+        const { user, band, onBackClick} = this.props;
         const buttonstyle = {
         color: 'white',
         'padding-top': '5px',
@@ -20,7 +20,7 @@ export class BandView extends React.Component {
         return (
 
             <div className="myband-view">
-
+     
                 <Row>
                     <Col className="band-poster" xs={12}>
                         <img src={band.ImagePath} />

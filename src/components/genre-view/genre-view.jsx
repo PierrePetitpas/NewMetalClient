@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BandView } from '../band-view/band-view';
 import { BandCard } from '../band-card/band-card';
+import { Link } from "react-router-dom";
 
 import './genre-view.scss';
 import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
@@ -9,11 +10,11 @@ import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 
 export class GenreView extends React.Component {
   render() {
 
-    const { genre, onBackClick, bands } = this.props;
+    const { genre, onBackClick, bands, user } = this.props;
 
     return (
         <div className="genre-view">
-
+       
         <Row>
             <Col xs={12}></Col>
         </Row>

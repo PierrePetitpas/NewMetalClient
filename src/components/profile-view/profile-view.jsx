@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
+import { connect } from 'react-redux';
 import axios from 'axios';
 import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 'react-bootstrap';
 import { BandCard } from '../band-card/band-card';
 import { Link } from "react-router-dom";
+import { setUser, updateUser } from '../../actions/actions';
 
 import './profile-view.scss';
 
@@ -241,13 +243,11 @@ handleRemoveSubmit(band) {
 }
 }
 
-/*ProfileView.propTypes = {
-  user: PropTypes.shape({
-    username: PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    firstname: PropTypes.string,
-    lastname: PropTypes.string,
-    DOB: PropTypes.number 
-  }).isRequired
-};*/
+let mapStateToProps = state => {
+  return {
+    user: state.user,
+    bands: state.bands
+  }
+}
+
+export default connect(mapStateToProps, { setUser, updateUser})(ProfileView);

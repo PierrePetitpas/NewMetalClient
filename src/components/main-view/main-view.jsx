@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 
 import { setBands } from '../../actions/actions';
 import BandsList from '../bands-list/bands-list';
+import NavBar from '../nav-bar/nav-bar';
 import DropdownMenu from '@restart/ui/esm/DropdownMenu';
 
 class MainView extends React.Component {
@@ -91,19 +92,8 @@ class MainView extends React.Component {
      <Router>
                 
                 <div className="main-view">
-                <Container className="main-view hide-nav">
-          
-          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" expand="lg" >
-                  <Navbar.Brand href="#">My Metal Site</Navbar.Brand>
-                  <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="ml-auto">
-                  <Nav.Link as={Link} to={'/'}>Bands</Nav.Link>
-                  <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
-                  <Nav.Link href="#" onClick={() => { this.onLoggedOut() }} >Logout</Nav.Link>
-                  </Nav>
-              </Navbar.Collapse>
-      </Navbar>
-          </Container>
+                <NavBar user={user} />
+
                     
                 <Route exact path="/" render={() => {
 
