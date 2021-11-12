@@ -4,6 +4,7 @@ import { Navbar, Nav, Form, Button, Card, CardGroup, Container, Row, Col } from 
 import axios from 'axios';
 import './login-view.scss';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 
 export function LoginView(props) {
@@ -56,3 +57,9 @@ LoginView.propTypes = {
     }),
     onLoggedIn: PropTypes.func.isRequired,
   };
+
+  const mapDispatchToProps = (dispatch) => ({
+    handleSubmit: (username, password) => dispatch(handleSubmit(username, password))
+  });
+
+  export default connect(null, mapDispatchToProps)(LoginView);
